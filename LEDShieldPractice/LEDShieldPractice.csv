@@ -1,0 +1,35 @@
+"Source:","C:\Users\Tyler\Documents\KiCad\16Bars\LEDShieldPractice\LEDShieldPractice.kicad_sch"
+"Date:","2/15/2022 3:33:57 PM"
+"Tool:","Eeschema (6.0.0)"
+"Generator:","C:\Program Files\KiCad\6.0\bin\scripting\plugins/bom_csv_grouped_by_value.py"
+"Component Count:","11"
+
+"Individual Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
+"","","C1","47uf","Device:C_Polarized_Small_US","Capacitor_THT:CP_Radial_D6.3mm_P2.50mm","~"
+"","","D1","1N4148","Device:D","Diode_THT:D_A-405_P7.62mm_Horizontal","~"
+"","","D2","LED","Device:LED","LED_THT:LED_D3.0mm","~"
+"","","DPWR1","LED","Device:LED","LED_THT:LED_D3.0mm","~"
+"","","J1","Conn_02x05_Odd_Even","Connector_Generic:Conn_02x05_Odd_Even","Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical","~"
+"","","J2","CLOCK_IN","Connector:AudioJack2","Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles","~"
+"","","Q1","2N3904","Transistor_BJT:2N3904","Package_TO_SOT_THT:TO-92_Inline","https://www.onsemi.com/pub/Collateral/2N3903-D.PDF"
+"","","R1","500","Device:R","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
+"","","R2","500","Device:R","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
+"","","R3","47K","Device:R","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
+"","","R4","10k","Device:R","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
+
+
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
+"1","1","C1","47uf","Device:C_Polarized_Small_US","Capacitor_THT:CP_Radial_D6.3mm_P2.50mm","~"
+"2","1","D1","1N4148","Device:D","Diode_THT:D_A-405_P7.62mm_Horizontal","~"
+"3","2","D2, DPWR1","LED","Device:LED","LED_THT:LED_D3.0mm","~"
+"4","1","J1","Conn_02x05_Odd_Even","Connector_Generic:Conn_02x05_Odd_Even","Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical","~"
+"5","1","J2","CLOCK_IN","Connector:AudioJack2","Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles","~"
+"6","1","Q1","2N3904","Transistor_BJT:2N3904","Package_TO_SOT_THT:TO-92_Inline","https://www.onsemi.com/pub/Collateral/2N3903-D.PDF"
+"7","2","R1, R2","500","Device:R","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
+"8","1","R3","47K","Device:R","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
+"9","1","R4","10k","Device:R","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal","~"
