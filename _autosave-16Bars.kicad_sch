@@ -2148,7 +2148,7 @@
   (symbol (lib_id "SamacSys_Parts:TDSR0760") (at 226.06 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 273f01f0-28d2-4494-b80f-412095039d4d)
-    (property "Reference" "DS-ONES" (id 0) (at 242.57 25.4 0))
+    (property "Reference" "DS-ONES1" (id 0) (at 242.57 25.4 0))
     (property "Value" "TDSR0760" (id 1) (at 242.57 27.94 0))
     (property "Footprint" "SamacSys_Parts:TDSR0760" (id 2) (at 255.27 30.48 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
@@ -3069,7 +3069,7 @@
   (symbol (lib_id "SamacSys_Parts:TDSR0760") (at 226.06 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid d443e6a6-aeca-4918-a2c3-170714850785)
-    (property "Reference" "DS-TENS" (id 0) (at 242.57 66.04 0))
+    (property "Reference" "DS-TENS1" (id 0) (at 242.57 66.04 0))
     (property "Value" "TDSR0760" (id 1) (at 242.57 68.58 0))
     (property "Footprint" "SamacSys_Parts:TDSR0760" (id 2) (at 255.27 71.12 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
@@ -3510,10 +3510,10 @@
       (reference "D1") (unit 1) (value "1N4148") (footprint "Diode_THT:D_A-405_P7.62mm_Horizontal")
     )
     (path "/273f01f0-28d2-4494-b80f-412095039d4d"
-      (reference "DS-ONES") (unit 1) (value "TDSR0760") (footprint "SamacSys_Parts:TDSR0760")
+      (reference "DS-ONES1") (unit 1) (value "TDSR0760") (footprint "SamacSys_Parts:TDSR0760")
     )
     (path "/d443e6a6-aeca-4918-a2c3-170714850785"
-      (reference "DS-TENS") (unit 1) (value "TDSR0760") (footprint "SamacSys_Parts:TDSR0760")
+      (reference "DS-TENS1") (unit 1) (value "TDSR0760") (footprint "SamacSys_Parts:TDSR0760")
     )
     (path "/fec73edc-3414-4808-9b3e-bbd5f70503c9"
       (reference "IC1") (unit 1) (value "CD4033BE") (footprint "SamacSys_Parts:DIP794W53P254L1930H508Q16N")

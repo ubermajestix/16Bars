@@ -1,4 +1,53 @@
-19800784894945170
+19817238949805480
+ArtworkFootprints
+ElkSilkNegative
+
+
+0
+0
+0
+ArtworkFootprints
+ElkSolderMask
+
+
+0
+0
+0
+ArtworkFootprints
+ElkTest
+
+
+0
+0
+0
+ArtworkFootprints
+Sheep
+
+
+0
+0
+0
+ArtworkFootprints
+SheepCopper
+
+
+0
+0
+0
+ArtworkFootprints
+SheepSilk
+
+
+0
+0
+0
+ArtworkFootprints
+SixteenWinds
+
+
+0
+0
+0
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2155,6 +2204,13 @@ SW PUSH SMALL Tactile C&K
 0
 4
 2
+Button_Switch_THT
+Thonk-LED-Button-MomentaryON
+
+
+0
+7
+5
 Buzzer_Beeper
 Buzzer_12x9.5RM7.6
 Generic Buzzer, D12mm height 9.5mm with RM7.6mm
@@ -57372,6 +57428,13 @@ mounting hole 3.2mm m3 iso14580
 2
 1
 MountingHole
+MountingHole_3.2mm_M3_IntellijelOval_Pad
+Mounting Hole 3.2mm, M3, ISO14580
+mounting hole 3.2mm m3 iso14580
+0
+1
+1
+MountingHole
 MountingHole_3.2mm_M3_Pad
 Mounting Hole 3.2mm, M3
 mounting hole 3.2mm m3
@@ -77545,6 +77608,13 @@ rotary encoder
 0
 5
 4
+SamacSys_Parts
+DIP794W53P254L1930H508Q14N
+N (R-PDIP-T14)
+Integrated Circuit
+0
+14
+14
 SamacSys_Parts
 DIP794W53P254L1930H508Q16N
 N (R-PDIP-T16)
