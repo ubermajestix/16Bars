@@ -8,6 +8,7 @@
 *.kicad_pcb-bak
 *.kicad_sch-bak
 *-backups
+*-backups/*.zip
 *.kicad_prl
 *.sch-bak
 *~
