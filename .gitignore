@@ -9,6 +9,9 @@
 *.kicad_sch-bak
 *-backups
 *-backups/*.zip
+**/*-backups
+16Bars-backups
+LEDShieldPractice/LEDShieldPractice-backups
 *.kicad_prl
 *.sch-bak
 *~
