@@ -1,0 +1,5 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"DS-ONES1","TDSR0760","TDSR0760",77.800000,-128.500000,0.000000,top
+"DS-TENS1","TDSR0760","TDSR0760",68.800000,-128.500000,0.000000,top
+"J1","CLOCK_IN","Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles",62.000000,-37.220000,0.000000,top
+"SW1","SW_Push_LED_Thonk_Low_Profile","ThonkLowProfileButton",78.932400,-46.111600,0.000000,top
