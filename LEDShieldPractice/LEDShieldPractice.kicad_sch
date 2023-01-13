@@ -678,6 +678,7 @@
     )
   )
 
+
   (junction (at 151.13 106.68) (diameter 0) (color 0 0 0 0)
     (uuid 0126896a-b4d1-4e9a-ab28-662b46fab2b9)
   )
@@ -860,10 +861,6 @@
   (text "POWER CONNECTOR" (at 151.13 93.98 180)
     (effects (font (size 1.524 1.524) (thickness 0.3048) bold) (justify right bottom))
     (uuid 545efa62-5726-4d01-bc8d-99cd59127379)
-  )
-  (text "-12V" (at 135.89 116.84 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 8ae55606-cfbf-467b-98ad-b305173bd9ee)
   )
 
   (label "+12V" (at 162.56 101.6 0)
@@ -1278,9 +1275,6 @@
     )
     (path "/d12a5abb-eb08-4f83-9a18-ab3c2e3daacf"
       (reference "#PWR05") (unit 1) (value "+12V") (footprint "")
-    )
-    (path "/2f312f60-80b4-4a8a-b378-5a3d48c8a106"
-      (reference "#PWR06") (unit 1) (value "GND") (footprint "")
     )
     (path "/12e7e1e5-156c-4508-bb16-ff0d257426f0"
       (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
