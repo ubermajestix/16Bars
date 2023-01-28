@@ -3613,7 +3613,7 @@
     (property "Footprint" "TDSR*:ThonkLowProfileButton" (id 2) (at 241.3 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (id 3) (at 241.3 119.38 0)
+    (property "Datasheet" "Datasheets/LowProfileButton.pdf" (id 3) (at 241.3 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid db42963e-8145-498a-99b5-ed8cd07f87a7))
