@@ -71,7 +71,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "")
+      (outputdirectory "Production/")
     )
   )
 
@@ -5691,6 +5691,56 @@
     (format (units 3) (units_format 1) (precision 4))
     (style (thickness 0.1) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
   )
+  (dimension (type orthogonal) (layer "User.4") (tstamp 36addfe8-510e-49c3-837e-ba170d3c602d)
+    (pts (xy 60.672 46.192) (xy 62.772 132.192))
+    (height 3.1)
+    (orientation 1)
+    (gr_text "86.0000 mm" (at 62.622 89.192 90) (layer "User.4") (tstamp 8176b0db-a502-41d9-893b-39b50be34974)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (format (units 3) (units_format 1) (precision 4))
+    (style (thickness 0.1) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
+  )
+  (dimension (type orthogonal) (layer "User.4") (tstamp 53b17835-e480-4e5c-8b74-1605418bb20f)
+    (pts (xy 62.932 46.222) (xy 64.532 59.702))
+    (height 11.06)
+    (orientation 1)
+    (gr_text "13.4800 mm" (at 72.842 52.962 90) (layer "User.4") (tstamp b4b7a9fe-fb2d-4c57-8ce5-2fb53af9b3ff)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (format (units 3) (units_format 1) (precision 4))
+    (style (thickness 0.1) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
+  )
+  (dimension (type orthogonal) (layer "User.4") (tstamp 92b4628a-1a08-4287-b193-6759a08c74a4)
+    (pts (xy 74.572 49.092) (xy 68.672 61.582))
+    (height 0.4)
+    (orientation 0)
+    (gr_text "5.9000 mm" (at 71.622 48.342) (layer "User.4") (tstamp 98cc038b-b2f3-46d2-9a23-f48de3e9c025)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (format (units 3) (units_format 1) (precision 4))
+    (style (thickness 0.1) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
+  )
+  (dimension (type orthogonal) (layer "User.4") (tstamp 9b04fc95-db12-4298-9659-c389d0cd403d)
+    (pts (xy 55.252 46.262) (xy 55.072 54.442))
+    (height -15.1)
+    (orientation 1)
+    (gr_text "8.1800 mm" (at 39.002 50.352 90) (layer "User.4") (tstamp b2a90d97-9459-4550-b1b9-16a2d8c3f335)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (format (units 3) (units_format 1) (precision 4))
+    (style (thickness 0.1) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
+  )
+  (dimension (type orthogonal) (layer "User.4") (tstamp a54f4c2d-06f6-4392-8214-c9ca8729f1be)
+    (pts (xy 45.152 54.452) (xy 50.622 52.472))
+    (height 3.09)
+    (orientation 0)
+    (gr_text "5.4700 mm" (at 47.887 56.392) (layer "User.4") (tstamp f7648785-8fb4-4774-95f6-ee7f28763e32)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (format (units 3) (units_format 1) (precision 4))
+    (style (thickness 0.1) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
+  )
 
   (group "" (id 5421a6e5-a05b-4898-945c-fa225425f888)
     (members
@@ -5746,6 +5796,7 @@
       3304f8c1-0b58-48f8-8b46-5fe2037c48aa
       33fff760-7aca-4c1f-802e-00160a5264ba
       35cad4d9-dd33-4faa-93bb-eff4b384fc2b
+      36addfe8-510e-49c3-837e-ba170d3c602d
       3a91bbd3-42d3-4bd5-9a5a-7a6e775cfc44
       3a9a86d1-9bd4-400c-a69f-64742a261db7
       3f1bee2a-a299-47a7-b57c-79d06adda66c
@@ -5767,6 +5818,7 @@
       4e825319-1186-4712-b33a-8f77d918d4de
       4fdf689b-abd7-4aac-a35a-3b5840dc94c6
       52658188-bc9e-4f6d-b46c-86849b0b7805
+      53b17835-e480-4e5c-8b74-1605418bb20f
       53d26f17-2516-43ae-a26d-b92840df6cf2
       53f7f719-bfe9-4cf5-a2a0-731bf3dcd3a6
       545d46d8-8745-4487-b25a-32bb6d8a1b50
@@ -5829,6 +5881,7 @@
       8efd571c-724b-48e8-97c4-251207a12463
       8f9f89a2-8b21-4271-ad2e-2e0f8d3ffcfb
       90792c10-e566-4f79-b2c8-92853f924b16
+      92b4628a-1a08-4287-b193-6759a08c74a4
       92d61bae-b3e6-4cd2-b708-7dd6ca8fc5c5
       931454a8-30cc-43b1-9505-32d005403de0
       936b2c49-b042-491e-aa87-f60e23509248
