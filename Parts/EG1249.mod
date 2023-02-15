@@ -1,0 +1,68 @@
+PCBNEW-LibModule-V1  2023-02-15 04:01:03
+# encoding utf-8
+Units mm
+$INDEX
+EG1249
+$EndINDEX
+$MODULE EG1249
+Po 0 0 0 15 63ec58ff 00000000 ~~
+Li EG1249
+Cd EG1249-3
+Kw Switch
+Sc 0
+At STD
+AR 
+Op 0 0 0
+T0 2.000 -0 1.27 1.27 0 0.254 N V 21 N "S**"
+T1 2.000 -0 1.27 1.27 0 0.254 N I 21 N "EG1249"
+DS -2.5 -2.1 6.5 -2.1 0.2 24
+DS 6.5 -2.1 6.5 2.1 0.2 24
+DS 6.5 2.1 -2.5 2.1 0.2 24
+DS -2.5 2.1 -2.5 -2.1 0.2 24
+DS -4.35 -3.1 8.35 -3.1 0.1 24
+DS 8.35 -3.1 8.35 3.1 0.1 24
+DS 8.35 3.1 -4.35 3.1 0.1 24
+DS -4.35 3.1 -4.35 -3.1 0.1 24
+DS -2.5 -1.5 -2.5 -2.1 0.1 21
+DS -2.5 -2.1 6.5 -2.1 0.1 21
+DS 6.5 -2.1 6.5 -1.5 0.1 21
+DS -2.5 1.5 -2.5 2.1 0.1 21
+DS -2.5 2.1 6.5 2.1 0.1 21
+DS 6.5 2.1 6.5 1.5 0.1 21
+$PAD
+Po 0.000 -0
+Sh "1" R 1.300 1.300 0 0 900
+Dr 0.8 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+$EndPAD
+$PAD
+Po 2.000 -0
+Sh "2" C 1.300 1.300 0 0 900
+Dr 0.8 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+$EndPAD
+$PAD
+Po 4.000 -0
+Sh "3" C 1.300 1.300 0 0 900
+Dr 0.8 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+$EndPAD
+$PAD
+Po -2.300 -0
+Sh "4" C 2.100 2.100 0 0 900
+Dr 1.4 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+$EndPAD
+$PAD
+Po 6.300 -0
+Sh "5" C 2.100 2.100 0 0 900
+Dr 1.4 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+$EndPAD
+$EndMODULE EG1249
+$EndLIBRARY
