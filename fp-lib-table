@@ -2,4 +2,5 @@
   (lib (name "EG1249")(type "KiCad")(uri "${KIPRJMOD}/Parts/footprints/EG1249.pretty")(options "")(descr ""))
   (lib (name "TDSR0760")(type "KiCad")(uri "${KIPRJMOD}/Parts/footprints/TDSR0760.pretty")(options "")(descr ""))
   (lib (name "thonk-low-profile-button")(type "KiCad")(uri "${KIPRJMOD}/Parts/footprints/thonk-low-profile-button.pretty")(options "")(descr ""))
+  (lib (name "LogoFootprints")(type "KiCad")(uri "${KIPRJMOD}/Panel/Footprints")(options "")(descr ""))
 )
