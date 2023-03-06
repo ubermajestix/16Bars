@@ -3392,7 +3392,7 @@
   (symbol (lib_id "Device:R") (at 219.71 133.35 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 760be0b5-2ae0-44b1-a2b5-f1bc3ecb081a)
-    (property "Reference" "R16" (id 0) (at 226.06 137.16 90)
+    (property "Reference" "R16" (id 0) (at 220.98 130.81 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (id 1) (at 220.98 133.35 90)
