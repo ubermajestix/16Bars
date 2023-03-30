@@ -57,3 +57,9 @@ The blank panels turned out great, I fabbed them with OshPark.com in purple (the
 line up and they were $7 and $12 shipped for three copies.
 
 ![sheep1u](https://user-images.githubusercontent.com/12533/156663417-cd1b6f46-bb50-49d7-b74c-5b3351a9ba3c.png)
+
+
+# License
+[Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+
+![Open-source-hardware-logo](https://user-images.githubusercontent.com/12533/228918104-3c78cb60-c5c0-4262-b0ad-a671cfebdcf8.png)
