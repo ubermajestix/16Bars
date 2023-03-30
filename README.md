@@ -26,9 +26,16 @@ I also breadboarded out and build test PCBS to validate significant portion of t
 - Built a switch test PCB. I ordered 4 different switches and after getting incorrect footprints for the seven segment leds from Mouser I didn't trust the switch footprints. I also wanted to validate the switch weight, height, footprint size tradeoffs, validate the switches are in-fact on-on SPDT, and ensure the switches are too able to be flipped by accident when patching as they control the reset logic and time signature (4/4 and 8/4). 
 
 Issues
-- The [surface mount transistors](https://www.lcsc.com/product-detail/Bipolar-Transistors-BJT_Jiangsu-Changjing-Electronics-Technology-Co-Ltd-C9634_C9634.html) do not work as intended 
+- The [surface mount transistors](https://www.lcsc.com/product-detail/Bipolar-Transistors-BJT_Jiangsu-Changjing-Electronics-Technology-Co-Ltd-C9634_C9634.html) do not work as intended. I am considering replacing them with through-hole NPN's I'm using on the breadboard to validate it's either a component problem or PCB routing problem. 
 
-## LED Sheild Practice aka Clock Blink
+# Panel Design
+Panel design ideas, PCB, and logo are in Panel/. I'm aiming for a wind theme throughout the design and naming.
+
+Rev 2.0 panel design is coming along:
+
+![panel preview](https://raw.githubusercontent.com/ubermajestix/16Bars/main/Panel/Designs/Rev2Panel-Preview.png)
+
+# LED Sheild Practice aka Clock Blink
 The design and fabrication process can be intimidating for a beginner. What I've learned from
 software development is to start easy and get something small all the way to production before tackling bigger
 projects. 
@@ -41,7 +48,7 @@ I wanted to use a keyed power header, know it worked by lighting up an LED, and 
 I fabricated the boards and got the power led to light up from my Eurorack case! The blinking feature isn't working and
 I'm debugging it as of March 2022. 
 
-# LED Shield Practice Panel
+# Practice Panel
 I also wanted to practice making a panel. Again, to simplify, I wanted to get the mounting holes placed correctly with oval
 holes like Intellijel 1U modules b/c my rails are never exactly aligned top to bottom. I was planning to make a control panel for the
 the ClockBlink board but I figured why not make a blank 1U panel with some Fiverr artwork? 
