@@ -19,6 +19,10 @@ with jumpers or switches~ Done! A 1U version would be much more convienient, res
 ## Rev 2.0 Updates and Issues
 I was successfully able to get JLCPCB to manufacture and place a lot of SMD components as I don't have the time or gear to get into surface mount, win! 
 
+![front of 2.0](https://github.com/ubermajestix/16Bars/blob/main/Fabrication/Rev2.0/Screenshot%202023-03-31%20at%2010.10.03%20AM.png)
+![back of 2.0](https://github.com/ubermajestix/16Bars/blob/main/Fabrication/Rev2.0/Screenshot%202023-03-31%20at%2010.10.35%20AM.png)
+
+
 I also breadboarded out and build test PCBS to validate significant portion of the Rev 2.0 design:
 - Reset button uses a transistor to send a reset signal instead of directly sending +12v when pressed
 - Two transistors to normalize a wide variety of incoming clock signal voltages and send +12v pulses to trigger the three counter ICs and blink the led in the reset button 
