@@ -55,9 +55,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "silk_over_copper|61970000|48417200|7692a7f3-9e24-4b8d-b6ef-bbea8d38680b|25f51cc4-e3ee-42f4-8ff5-b230e9e63a8a"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -429,10 +427,6 @@
     [
       "9538e4ed-27e6-4c37-b989-9859dc0d49e8",
       ""
-    ],
-    [
-      "3129722e-118e-4e2e-bcaf-be58aa217a13",
-      "SevenSegment"
     ]
   ],
   "text_variables": {}
