@@ -1,3 +1,5 @@
+#include <Debounce.h>
+
 // only pins 2 and 3 can interrupt
 const byte clockSignalPin = 2;    // Connect your clock square wave signal here
 const byte ledPin = LED_BUILTIN;  // Built-in LED
@@ -6,6 +8,7 @@ const byte clockBarPin = 4;       // Outputs square wave every musical bar
 const byte resetSignalPin = 5;    // Reset signal to reset seven segment LEDs
 const byte triggerWidth = 50;     // milliseconds
 
+Debounce resetButton(resetButtonPin, 50, false); // Provides 50ms debounced button with methods #count and #resetCount
 volatile byte beatCounter = 0;  // Counter for the clock pulses
 volatile byte barCounter = 0;   // Counter for the musical bars
 volatile byte barsPerPhrase = 16;
@@ -13,6 +16,10 @@ volatile byte beatsPerMeasure = 4;
 volatile bool clockBarState = LOW;  // Led State, initially set to LOW
 volatile bool resetState = LOW;     // Led State, initially set to LOW
 volatile bool ledState = LOW;       // Led State, initially set to LOW
+volatile bool clock = LOW;
+volatile bool lastClock = LOW;
+
+
 
 void setup() {
   pinMode(clockSignalPin, INPUT);
@@ -22,45 +29,45 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
   Serial.print("setup ");
-
-  // Attach an interrupt to the clockSignalPin
-  // The 'blinkLed' function will be called whenever a rising edge is detected
-  // attachInterrupt(digitalPinToInterrupt(clockSignalPin), incrementCounters, RISING);
-  // TODO debounce button?
-  // TODO not sure if this is the right way to do this, this seems to be causing reset to trigger early without a button push
-  // do we need a pull down resistor?
-  // attachInterrupt(digitalPinToInterrupt(resetButtonPin), resetCounters, RISING);
 }
 
 void loop() {
-  // todo check timers to emit longer triggers
+  // TODO can we get the counters to count from 1 to 16 instead of 0 to 15? If barCounter == 0 send fast trigger to get leds to display 01 before next clock pulse?
 
-  bool clock = digitalRead(clockSignalPin);
-  bool reset = digitalRead(resetButtonPin);
+    // TODO loop is reading the clock high see if clock changed?
+  clock = digitalRead(clockSignalPin);
+  if(clock == LOW){
+    lastClock = LOW;
+  }
+  bool reset = resetButton.read();
   if (reset == HIGH) {
     Serial.println("----resetbutton---");
     barCounter = 0;
     beatCounter = 0;
-    digitalWrite(resetSignalPin, HIGH);
+    // digitalWrite(resetSignalPin, HIGH);
+    resetState = HIGH;
   }
-  if (clock == HIGH) {
+  if (clock == HIGH && lastClock = LOW) {
+    lastClock = clock;
     incrementCounters();
   }
 }
-
 // This function will be called whenever a rising edge is detected from the clock
 void incrementCounters() {
   Serial.println("-------clock------");
-  clockBarState = LOW;
-  resetState = LOW;
+
   digitalWrite(clockBarPin, clockBarState);
   digitalWrite(resetSignalPin, resetState);
+  clockBarState = LOW;
+  resetState = LOW;
 
   beatCounter++;
+  Serial.print("beat ");
+  Serial.println(beatCounter);
   if (beatCounter >= beatsPerMeasure) {
     barCounter++;
     clockBarState = HIGH;
-    digitalWrite(clockBarPin, clockBarState);
+    // digitalWrite(clockBarPin, clockBarState);
 
     beatCounter = 0;
   }
@@ -68,13 +75,11 @@ void incrementCounters() {
     resetState = HIGH;
     barCounter = 0;
     beatCounter = 0;
-    digitalWrite(resetSignalPin, resetState);
+    // digitalWrite(resetSignalPin, resetState);
 
     // TODO about to reset check state of switches for beatsPerMeasure and barsPerPhrase
   }
-  Serial.println("-------loop------");
-  Serial.print("beat ");
-  Serial.println(beatCounter);
+
   Serial.print("bar ");
   Serial.println(barCounter);
   Serial.print("clockBar ");
