@@ -1,0 +1,5 @@
+{
+    "sketch": "Firmware\\16Bars\\16Bars.ino",
+    "configuration": "cpu=atmega328old",
+    "board": "arduino:avr:nano"
+}

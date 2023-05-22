@@ -8,16 +8,19 @@ const byte clockBarPin = 4;       // Outputs square wave every musical bar
 const byte resetSignalPin = 5;    // Reset signal to reset seven segment LEDs
 const byte triggerWidth = 50;     // milliseconds
 
-Debounce resetButton(resetButtonPin, 50, false); // Provides 50ms debounced button with methods #count and #resetCount
+// Debounce resetButton(resetButtonPin, 50, false); // Provides 50ms debounced button with methods #count and #resetCount
 volatile byte beatCounter = 0;  // Counter for the clock pulses
 volatile byte barCounter = 0;   // Counter for the musical bars
 volatile byte barsPerPhrase = 16;
 volatile byte beatsPerMeasure = 4;
 volatile bool clockBarState = LOW;  // Led State, initially set to LOW
-volatile bool resetState = LOW;     // Led State, initially set to LOW
-volatile bool ledState = LOW;       // Led State, initially set to LOW
-volatile bool clock = LOW;
-volatile bool lastClock = LOW;
+volatile bool resetOutputState = LOW;
+volatile bool resetButtonState = LOW;     
+volatile bool ledState = LOW;      
+volatile bool clockState = LOW;
+volatile bool lastClockState = LOW;
+volatile bool lastResetButtonState = LOW;
+
 
 
 
@@ -34,21 +37,41 @@ void setup() {
 void loop() {
   // TODO can we get the counters to count from 1 to 16 instead of 0 to 15? If barCounter == 0 send fast trigger to get leds to display 01 before next clock pulse?
 
-    // TODO loop is reading the clock high see if clock changed?
-  clock = digitalRead(clockSignalPin);
-  if(clock == LOW){
-    lastClock = LOW;
+    // TODO loop is reading the clock high see if clock changed? We were getting two loops within a short clock trigger need to detect rising edge
+    // Alternatively set the loop speed to be longer than a clock, this doesn't handle gates, so we need to detect edges.
+    // -- Loop 0
+    // clock = LOW
+    // lastClock set to LOW
+    // NO OP clock not high
+    // -- Loop 1
+    // clock = HIGH
+    // lastClock = LOW
+    // Increment!
+    // lastClock set to HIGH
+    // --- Loop 2
+    // clock = HIGH
+    // lastClock = HIGH
+    // NO OP, lastClock not low wait for clock to go low
+    // -- Loop 3
+    // clock = LOW
+    // lastClock set to LOW
+    // NO OP, clock not high
+  lastClockState = clockState;
+  lastResetButtonState = resetButtonState;
+  clockState = digitalRead(clockSignalPin);
+  if(clockState == LOW){
+    lastClockState = LOW;
   }
-  bool reset = resetButton.read();
-  if (reset == HIGH) {
+  // bool resetButtonState = resetButton.read();
+  if (resetButtonState && !lastResetButtonState) {
     Serial.println("----resetbutton---");
     barCounter = 0;
     beatCounter = 0;
     // digitalWrite(resetSignalPin, HIGH);
-    resetState = HIGH;
+    resetOutputState = HIGH;
   }
-  if (clock == HIGH && lastClock = LOW) {
-    lastClock = clock;
+  if (clockState == HIGH && lastClockState == LOW) {
+    lastClockState = clockState;
     incrementCounters();
   }
 }
@@ -57,9 +80,9 @@ void incrementCounters() {
   Serial.println("-------clock------");
 
   digitalWrite(clockBarPin, clockBarState);
-  digitalWrite(resetSignalPin, resetState);
+  digitalWrite(resetSignalPin, resetOutputState);
   clockBarState = LOW;
-  resetState = LOW;
+  resetOutputState = LOW;
 
   beatCounter++;
   Serial.print("beat ");
@@ -72,10 +95,10 @@ void incrementCounters() {
     beatCounter = 0;
   }
   if (barCounter >= barsPerPhrase) {
-    resetState = HIGH;
+    resetOutputState = HIGH;
     barCounter = 0;
     beatCounter = 0;
-    // digitalWrite(resetSignalPin, resetState);
+    // digitalWrite(resetSignalPin, resetOutputState);
 
     // TODO about to reset check state of switches for beatsPerMeasure and barsPerPhrase
   }
@@ -85,7 +108,7 @@ void incrementCounters() {
   Serial.print("clockBar ");
   Serial.println(clockBarState);
   Serial.print("reset ");
-  Serial.println(resetState);
+  Serial.println(resetOutputState);
 }
 
 
