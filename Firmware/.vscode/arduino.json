@@ -1,5 +1,6 @@
 {
-    "sketch": "Firmware\\16Bars\\16Bars.ino",
+    "sketch": "16Bars\\16Bars.ino",
     "configuration": "cpu=atmega328old",
-    "board": "arduino:avr:nano"
+    "board": "arduino:avr:nano",
+    "output": "./ArduinoOutput"
 }

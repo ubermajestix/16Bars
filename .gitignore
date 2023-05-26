@@ -33,5 +33,6 @@ fp-info-cache
 # Exported BOM files
 # *.xml
 # *.csv
-**/.vscode/c_cpp_properties.json
+# **/.vscode/c_cpp_properties.json # This file might help to get things working on my other machine.
 Firmware/.theia/launch.json
+ArduinoOutput

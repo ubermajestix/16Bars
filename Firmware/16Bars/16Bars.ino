@@ -1,37 +1,27 @@
-#include <Debounce.h>
+// Code for these libs needs to be synced C:/Users/Tyler/AppData/Local/Arduino15/libraries/
+// TODO remove debounce in PinMon works
+#include "src/debug.h"
+#include "src/UberPin/UberPin.h"
 
-// only pins 2 and 3 can interrupt
-const byte clockSignalPin = 2;    // Connect your clock square wave signal here
-const byte ledPin = LED_BUILTIN;  // Built-in LED
-const byte resetButtonPin = 3;    // Reset button, push to reset counters to zero
-const byte clockBarPin = 4;       // Outputs square wave every musical bar
-const byte resetSignalPin = 5;    // Reset signal to reset seven segment LEDs
-const byte triggerWidth = 50;     // milliseconds
+UberPin clockPin(2);
+UberPin resetButtonPin(3, 50);
+UberPin clockBarPin(4);
+UberPin resetOutPin(5);
 
-// Debounce resetButton(resetButtonPin, 50, false); // Provides 50ms debounced button with methods #count and #resetCount
 volatile byte beatCounter = 0;  // Counter for the clock pulses
 volatile byte barCounter = 0;   // Counter for the musical bars
 volatile byte barsPerPhrase = 16;
 volatile byte beatsPerMeasure = 4;
 volatile bool clockBarState = LOW;  // Led State, initially set to LOW
 volatile bool resetOutputState = LOW;
-volatile bool resetButtonState = LOW;     
-volatile bool ledState = LOW;      
-volatile bool clockState = LOW;
-volatile bool lastClockState = LOW;
-volatile bool lastResetButtonState = LOW;
-
-
-
 
 void setup() {
-  pinMode(clockSignalPin, INPUT);
-  pinMode(resetButtonPin, INPUT);
-  pinMode(clockBarPin, OUTPUT);
-  pinMode(resetSignalPin, OUTPUT);
-  pinMode(ledPin, OUTPUT);
+  pinMode(clockPin.pin, INPUT);
+  pinMode(resetButtonPin.pin, INPUT);
+  pinMode(clockBarPin.pin, OUTPUT);
+  pinMode(resetOutPin.pin, OUTPUT);
   Serial.begin(9600);
-  Serial.print("setup ");
+  debug("setup ");
 }
 
 void loop() {
@@ -56,59 +46,50 @@ void loop() {
     // clock = LOW
     // lastClock set to LOW
     // NO OP, clock not high
-  lastClockState = clockState;
-  lastResetButtonState = resetButtonState;
-  clockState = digitalRead(clockSignalPin);
-  if(clockState == LOW){
-    lastClockState = LOW;
-  }
-  // bool resetButtonState = resetButton.read();
-  if (resetButtonState && !lastResetButtonState) {
-    Serial.println("----resetbutton---");
+  if(resetButtonPin.changed(HIGH)){
+    debugln("----resetbutton---");
     barCounter = 0;
     beatCounter = 0;
     // digitalWrite(resetSignalPin, HIGH);
     resetOutputState = HIGH;
   }
-  if (clockState == HIGH && lastClockState == LOW) {
-    lastClockState = clockState;
+  // TODO added 5millisecond default debounce to PinMonitor::changed
+  // so we only pickup clean signals, is this too long for trigger pulses?
+  if(clockPin.changed(HIGH)){
     incrementCounters();
   }
 }
 // This function will be called whenever a rising edge is detected from the clock
 void incrementCounters() {
-  Serial.println("-------clock------");
+  debugln("-------clock------");
 
-  digitalWrite(clockBarPin, clockBarState);
-  digitalWrite(resetSignalPin, resetOutputState);
+  clockBarPin.write(clockBarState);
+  resetOutPin.write(resetOutputState);
+
   clockBarState = LOW;
   resetOutputState = LOW;
 
   beatCounter++;
-  Serial.print("beat ");
-  Serial.println(beatCounter);
+  debug("beat ");
+  debugln(beatCounter);
   if (beatCounter >= beatsPerMeasure) {
-    barCounter++;
     clockBarState = HIGH;
-    // digitalWrite(clockBarPin, clockBarState);
-
+    barCounter++;
     beatCounter = 0;
   }
   if (barCounter >= barsPerPhrase) {
     resetOutputState = HIGH;
     barCounter = 0;
     beatCounter = 0;
-    // digitalWrite(resetSignalPin, resetOutputState);
-
-    // TODO about to reset check state of switches for beatsPerMeasure and barsPerPhrase
+    // TODO when we reset check state of switches for beatsPerMeasure and barsPerPhrase
   }
 
-  Serial.print("bar ");
-  Serial.println(barCounter);
-  Serial.print("clockBar ");
-  Serial.println(clockBarState);
-  Serial.print("reset ");
-  Serial.println(resetOutputState);
+  debug("bar ");
+  debugln(barCounter);
+  debug("clockBar ");
+  debugln(clockBarState);
+  debug("reset ");
+  debugln(resetOutputState);
 }
 
 
