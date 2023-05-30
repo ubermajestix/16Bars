@@ -2,5 +2,6 @@
     "sketch": "16Bars\\16Bars.ino",
     "configuration": "cpu=atmega328old",
     "board": "arduino:avr:nano",
-    "output": "./ArduinoOutput"
+    "output": "./ArduinoOutput",
+    "port": "COM3"
 }

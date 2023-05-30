@@ -1,27 +1,40 @@
-// Code for these libs needs to be synced C:/Users/Tyler/AppData/Local/Arduino15/libraries/
-// TODO remove debounce in PinMon works
 #include "src/debug.h"
 #include "src/UberPin/UberPin.h"
 
-UberPin clockPin(2);
-UberPin resetButtonPin(3, 50);
-UberPin clockBarPin(4);
-UberPin resetOutPin(5);
+const byte clockPinNum = 2;
+const byte resetButtonPinNum = 3;
+const byte clockBarPinNum = 4;
+const byte resetOutPinNum = 5;
+
+UberPin clockPin(clockPinNum);
+UberPin resetButtonPin(resetButtonPinNum, 50);
+UberPin clockBarPin(clockBarPinNum);
+UberPin resetOutPin(resetOutPinNum);
 
 volatile byte beatCounter = 0;  // Counter for the clock pulses
 volatile byte barCounter = 0;   // Counter for the musical bars
 volatile byte barsPerPhrase = 16;
 volatile byte beatsPerMeasure = 4;
+volatile byte resetButtonPressed = 0;
 volatile bool clockBarState = LOW;  // Led State, initially set to LOW
 volatile bool resetOutputState = LOW;
+volatile bool resetPhrase = LOW;
+
 
 void setup() {
-  pinMode(clockPin.pin, INPUT);
-  pinMode(resetButtonPin.pin, INPUT);
-  pinMode(clockBarPin.pin, OUTPUT);
-  pinMode(resetOutPin.pin, OUTPUT);
+  pinMode(clockPinNum, INPUT);
+  pinMode(resetButtonPinNum, INPUT_PULLUP);
+  pinMode(clockBarPinNum, OUTPUT);
+  pinMode(resetOutPinNum, OUTPUT);
   Serial.begin(9600);
+  Serial.println("setup");
   debug("setup ");
+  debug("clock ");
+  debugln(clockPin.pin());
+  debugln(clockPin.read());
+    debug("reset ");
+  debugln(resetButtonPin.pin());
+  debugln(resetButtonPin.read());
 }
 
 void loop() {
@@ -46,18 +59,26 @@ void loop() {
     // clock = LOW
     // lastClock set to LOW
     // NO OP, clock not high
-  if(resetButtonPin.changed(HIGH)){
+  if(resetButtonPin.changed(LOW)){
     debugln("----resetbutton---");
+        // TODO when we reset check state of switches for beatsPerMeasure and barsPerPhrase
     barCounter = 0;
     beatCounter = 0;
-    // digitalWrite(resetSignalPin, HIGH);
-    resetOutputState = HIGH;
+    resetOutPin.write(HIGH);
+    resetButtonPressed = 1;
   }
+  if(resetButtonPin.changed(HIGH)){
+    resetOutPin.write(LOW);
+    resetButtonPressed = 0;
+  }
+
   // TODO added 5millisecond default debounce to PinMonitor::changed
   // so we only pickup clean signals, is this too long for trigger pulses?
-  if(clockPin.changed(HIGH)){
+  // if(clockPin.changed(HIGH) && resetButtonPin.read() == HIGH){ // if there's a clock and the resetbutton (pullup) is not pressed
+    if(clockPin.changed(HIGH) && !resetButtonPressed){ // if there's a clock and the resetbutton (pullup) is not pressed
+
     incrementCounters();
-  }
+  } 
 }
 // This function will be called whenever a rising edge is detected from the clock
 void incrementCounters() {
@@ -68,7 +89,6 @@ void incrementCounters() {
 
   clockBarState = LOW;
   resetOutputState = LOW;
-
   beatCounter++;
   debug("beat ");
   debugln(beatCounter);
@@ -81,7 +101,6 @@ void incrementCounters() {
     resetOutputState = HIGH;
     barCounter = 0;
     beatCounter = 0;
-    // TODO when we reset check state of switches for beatsPerMeasure and barsPerPhrase
   }
 
   debug("bar ");

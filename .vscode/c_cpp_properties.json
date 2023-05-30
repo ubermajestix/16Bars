@@ -3,18 +3,17 @@
     "configurations": [
         {
             "name": "Win32",
-            "compilerPath": "",
+            "compilerPath": "C:/Users/carol/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
             "compilerArgs": [],
-            "intelliSenseMode": "windows-clang-x64",
+            "intelliSenseMode": "windows-gcc-x64",
             "includePath": [
-                "${workspaceFolder}\\**",
-                "C:\\Users\\Tyler\\AppData\\Local\\Arduino15\\**",
-                "C:\\Users\\carol\\AppData\\Local\\Arduino15\\**"
-
+                "${workspaceFolder}/**",
+                "C:/Users/carol/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/carol/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
             ],
             "forcedInclude": [],
-            "cStandard": "c99",
-            "cppStandard": "c++23",
+            "cStandard": "c11",
+            "cppStandard": "gnu++14",
             "defines": [
                 "_DEBUG",
                 "UNICODE",
@@ -39,6 +38,7 @@
             "includePath": [
                 "C:\\Users\\carol\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino",
                 "C:\\Users\\carol\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\eightanaloginputs",
+                "C:\\Users\\carol\\Documents\\Arduino\\libraries\\Debounce-1.2",
                 "c:\\users\\carol\\appdata\\local\\arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7\\lib\\gcc\\avr\\7.3.0\\include",
                 "c:\\users\\carol\\appdata\\local\\arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7\\lib\\gcc\\avr\\7.3.0\\include-fixed",
                 "c:\\users\\carol\\appdata\\local\\arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7\\avr\\include"
