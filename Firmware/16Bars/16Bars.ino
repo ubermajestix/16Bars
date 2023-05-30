@@ -7,13 +7,13 @@ const byte clockBarPinNum = 4;
 const byte resetOutPinNum = 5;
 
 UberPin clockPin(clockPinNum);
-UberPin resetButtonPin(resetButtonPinNum, 50);
+UberPin resetButtonPin(resetButtonPinNum, 5);
 UberPin clockBarPin(clockBarPinNum);
 UberPin resetOutPin(resetOutPinNum);
 
 volatile byte beatCounter = 0;  // Counter for the clock pulses
 volatile byte barCounter = 0;   // Counter for the musical bars
-volatile byte barsPerPhrase = 16;
+volatile byte barsPerPhrase = 4;
 volatile byte beatsPerMeasure = 4;
 volatile byte resetButtonPressed = 0;
 volatile bool clockBarState = LOW;  // Led State, initially set to LOW
@@ -66,10 +66,15 @@ void loop() {
     beatCounter = 0;
     resetOutPin.write(HIGH);
     resetButtonPressed = 1;
+        debugln(resetButtonPressed);
+
   }
   if(resetButtonPin.changed(HIGH)){
+    debugln('---resetRelease---');
     resetOutPin.write(LOW);
     resetButtonPressed = 0;
+        debugln(resetButtonPressed);
+
   }
 
   // TODO added 5millisecond default debounce to PinMonitor::changed
@@ -78,7 +83,13 @@ void loop() {
     if(clockPin.changed(HIGH) && !resetButtonPressed){ // if there's a clock and the resetbutton (pullup) is not pressed
 
     incrementCounters();
-  } 
+    }
+    // else{
+    //   debug("resetbutton ");
+    //   debugln(resetButtonPressed);
+    //   debugln(resetButtonPin.read());
+      
+    // }
 }
 // This function will be called whenever a rising edge is detected from the clock
 void incrementCounters() {
