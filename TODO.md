@@ -1,8 +1,5 @@
 # TODO
-1. Breadboard 4510 reset logic with two ics, 4 transistors, a reset button, and an led
-- 5/15 Breadboarded two 4510's, reset signal from 4510 outputs not strong enough to reset both ICs. Button reset works, validate current restriction resistor from +12v to button. 
-2. Seven segment sub-board. Use mousebites to breakoff sub-board that contains two 4033 ICs and seven segment LEDs with resistor and capictors in place. Build headers to send +12, GND, ClockBar, and Reset. Saves time testing, I know the 4033's and seven segment leds work, and this would push them closer to the panel for easier viewing. 
-3. More jacks: 
-    1. Inputs: reset jack, 
-    2. Outputs: first bar, middle bar, last bar, clock bar
-4. Move entire build to microcontroller 
+1. Moved to Arduino, software for basic operation done. 
+2. Need to redo schematic for Nano, reset jack, bar clock, first bar, middle bar, last bar, and 4 pin header for seven segment sub-board. 
+3. Reduce to 4HP.
+4. Is SevenSegment more stable with shift registers controlled by Arduino? 4033 docs say they are easily inteferred with, and they seem a little wonky, maybe it's my soldering, but they don't always work. 
