@@ -23,8 +23,11 @@ void UberPin::write(bool val)
 }
 
 // returns the UberPin button state: LOW or HIGH.
-bool UberPin::changed(bool direction)
-{
+// TODO remove direction
+// update lastState after checking if it changed
+// store direction the change was in
+// make direction public
+bool UberPin::changed(bool direction){
   unsigned long interruptTime = millis();
   // If we ask for a change in less than 5ms, assume it's a bounce and ignore
   if (interruptTime - lastInterruptTime > _debounce_ms)
