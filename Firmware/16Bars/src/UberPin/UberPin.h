@@ -8,9 +8,10 @@ public:
   UberPin(byte pin, byte debounce_ms = 1);
   byte pin();
   byte lastState;
-  bool changed(bool direction);
+  bool changed();
   byte read();
   void write(bool val); 
+  byte direction;
 
 private:
   byte _pin;

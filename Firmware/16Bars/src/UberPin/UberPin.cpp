@@ -7,6 +7,7 @@ UberPin::UberPin(byte pin, byte debounce_ms = 1)
   _debounce_ms = debounce_ms;
   lastState = digitalRead(_pin);
   lastInterruptTime = 0;
+  direction = 0;
 };
 
 byte UberPin::pin()
@@ -27,29 +28,29 @@ void UberPin::write(bool val)
 // update lastState after checking if it changed
 // store direction the change was in
 // make direction public
-bool UberPin::changed(bool direction){
+bool UberPin::changed()
+{
   unsigned long interruptTime = millis();
   // If we ask for a change in less than 5ms, assume it's a bounce and ignore
+  bool changedState = false;
   if (interruptTime - lastInterruptTime > _debounce_ms)
   {
     lastInterruptTime = interruptTime;
     byte currentState = digitalRead(_pin);
-    bool changedState = false;
-    if (currentState != lastState){
-    // if(_pin == 2)
-    // {
-    debug("changed pin "); debug(_pin); 
-    debug(" current "); debug(currentState); debug(" last "); debug(lastState); debug(" direction "); debug(direction);
-    debug(" changed "); debug(currentState != lastState); 
-  // }
-      lastState = currentState;
-      if(currentState == direction)
+    if (currentState != lastState)
     {
-    debug(" in correct direction "); debugln(currentState == direction);
-      // lastState = currentState;
-       changedState = true;
+      changedState = true;
+      direction = changedState > lastState;
+      // if(_pin == 2)
+      // {
+      debug("changed pin "); debug(_pin);
+      debug(" current "); debug(currentState); debug(" last "); debug(lastState); debug(" direction "); debugln(direction);
+      // }
     }
+    else{
+      changedState = false;
     }
-  return changedState;
+    lastState = currentState;
   }
+  return changedState;
 };

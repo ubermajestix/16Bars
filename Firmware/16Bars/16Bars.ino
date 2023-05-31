@@ -61,25 +61,28 @@ void loop()
   // lastClock set to LOW
   // NO OP, clock not high
 
-  if (resetButtonPin.changed(LOW))
+  if (resetButtonPin.changed())
   {
-    debugln("----resetbutton---");
-    // TODO when we reset check state of switches for beatsPerMeasure and barsPerPhrase
-    barCounter = 0;
-    beatCounter = 0;
-    resetOutPin.write(HIGH);
-    resetButtonPressed = 1;
-  }
-  if (resetButtonPin.changed(HIGH))
-  {
-    debugln("---resetRelease---");
-    resetOutPin.write(LOW);
-    resetButtonPressed = 0;
+    if (resetButtonPin.direction == 1)
+    {
+      debugln("---resetRelease---");
+      resetOutPin.write(LOW);
+      resetButtonPressed = 0;
+    }
+    else
+    {
+      debugln("----resetbutton---");
+      // TODO when we reset check state of switches for beatsPerMeasure and barsPerPhrase
+      barCounter = 0;
+      beatCounter = 0;
+      resetOutPin.write(HIGH);
+      resetButtonPressed = 1;
+    }
   }
   // TODO added 5millisecond default debounce to PinMonitor::changed
   // so we only pickup clean signals, is this too long for trigger pulses?
   // if(clockPin.changed(HIGH) && resetButtonPin.read() == HIGH){ // if there's a clock and the resetbutton (pullup) is not pressed
-  if (clockPin.changed(HIGH))
+  if (clockPin.changed() && clockPin.direction == 1)
   { // if there's a clock and the resetbutton (pullup) is not pressed
     debugln("clock incoming");
     debug("reset button pressed: ");
@@ -89,7 +92,6 @@ void loop()
       incrementCounters();
     }
   }
-  delay(1);
 }
 // This function will be called whenever a rising edge is detected from the clock
 void incrementCounters()
