@@ -5,7 +5,7 @@
 
 class UberPin{
 public:
-  UberPin(byte pin, byte debounce_ms = 50);
+  UberPin(byte pin, byte debounce_ms = 1);
   byte pin();
   byte lastState;
   bool changed(bool direction);
@@ -15,5 +15,6 @@ public:
 private:
   byte _pin;
   byte _debounce_ms;
+  unsigned long lastInterruptTime;
 };
 #endif
