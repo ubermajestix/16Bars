@@ -6,6 +6,7 @@ const byte resetButtonPinNum = 3;
 const byte clockBarPinNum = 4;
 const byte resetOutPinNum = 5;
 const byte barsPerPhrasePinNum = 6;
+const byte beatsPerBarPinNum = 7;
 
 UberPin clockPin(clockPinNum);
 UberPin resetButtonPin(resetButtonPinNum, 5);
@@ -14,15 +15,16 @@ UberPin resetOutPin(resetOutPinNum);
 
 volatile byte beatCounter = 0; // Counter for the clock pulses
 volatile byte barCounter = 0;  // Counter for the musical bars
-volatile byte barsPerPhrase = 8;
-volatile byte beatsPerMeasure = 4;
+volatile byte barsPerPhrase = 16; // Can be set with switch to 8 bars at reset.
+volatile byte beatsPerBar= 4; // Can be set to 4, 7, 8, 11, 12, 16 with 
 volatile byte resetButtonPressed = 0;
 volatile bool clockBarState = LOW; // Led State, initially set to LOW
 volatile bool resetPhrase = LOW;
 
 void setup(){
   pinMode(clockPinNum, INPUT);
-  pinMode(barsPerPhrasePinNum, INPUT);
+  pinMode(barsPerPhrasePinNum, INPUT_PULLUP);
+  pinMode(beatsPerBarPinNum, INPUT_PULLUP);
   pinMode(resetButtonPinNum, INPUT_PULLUP);
   pinMode(clockBarPinNum, OUTPUT);
   pinMode(resetOutPinNum, OUTPUT);
@@ -39,7 +41,7 @@ void loop(){
     }
     else {
       debugln("----resetbutton---");
-      // TODO when we reset check state of switches for beatsPerMeasure and barsPerPhrase
+      // TODO when we reset check state of switches for beatsPerBar and barsPerPhrase
       barCounter = 0;
       beatCounter = 0;
       resetOutPin.write(HIGH);
@@ -65,7 +67,7 @@ void incrementCounters(){
   beatCounter++;
   debug("beat ");
   debugln(beatCounter);
-  if (beatCounter >= beatsPerMeasure){
+  if (beatCounter >= beatsPerBar){
     clockBarState = HIGH;
     barCounter++;
     beatCounter = 0;
@@ -74,8 +76,10 @@ void incrementCounters(){
     resetPhrase = HIGH;
     barCounter = 0;
     beatCounter = 0;
-    // read phrase length and beatsPerMeasure settings.
-    barsPerPhrase = digitalRead(barsPerPhrasePinNum) ? 8 : 16;
+    // read phrase length, if HIGH set to 16 bars
+    barsPerPhrase = digitalRead(barsPerPhrasePinNum) ? 16 : 8;
+        beatsPerBar = 4; //TODO read from rotary switch?
+
   }
 
   debug("bar ");
