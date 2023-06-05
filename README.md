@@ -1,4 +1,5 @@
 # 16Bars
+[![FirmewareBuild](https://github.com/ubermajestix/16Bars/actions/workflows/main.yml/badge.svg)](https://github.com/ubermajestix/16Bars/actions/workflows/main.yml)
 
 ![16barsPCB](https://user-images.githubusercontent.com/12533/156662021-8fc3b2a8-bc3f-4ee7-a015-541e6d8de693.png)
 
