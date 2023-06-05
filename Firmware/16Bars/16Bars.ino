@@ -6,7 +6,9 @@ const byte resetButtonPinNum = 3;
 const byte clockBarPinNum = 4;
 const byte resetOutPinNum = 5;
 const byte barsPerPhrasePinNum = 6;
-const byte beatsPerBarPinNum = 7;
+const byte beatsPerBarPins[5] = {7, 8, 9, 10, 11};
+const byte beatsPerBarValues[5] = {4, 7, 8, 12, 16};
+const byte barsPerPhraseValues[2] = {8,16}; 
 
 UberPin clockPin(clockPinNum);
 UberPin resetButtonPin(resetButtonPinNum, 5);
@@ -14,9 +16,9 @@ UberPin clockBarPin(clockBarPinNum);
 UberPin resetOutPin(resetOutPinNum);
 
 volatile byte beatCounter = 0; // Counter for the clock pulses
-volatile byte barCounter = 0;  // Counter for the musical bars
-volatile byte barsPerPhrase = 16; // Can be set with switch to 8 bars at reset.
-volatile byte beatsPerBar= 4; // Can be set to 4, 7, 8, 11, 12, 16 with 
+volatile byte barCounter = 0;  // Counter for bars
+volatile byte barsPerPhrase = barsPerPhraseValues[1]; // Default is 16 bars because, uh, that's the name of the project.
+volatile byte beatsPerBar= beatsPerBarValues[0]; // Default is 4. Can be set to 4, 7, 8, 12, 16 with switch 
 volatile byte resetButtonPressed = 0;
 volatile bool clockBarState = LOW; // Led State, initially set to LOW
 volatile bool resetPhrase = LOW;
@@ -24,8 +26,11 @@ volatile bool resetPhrase = LOW;
 void setup(){
   pinMode(clockPinNum, INPUT);
   pinMode(barsPerPhrasePinNum, INPUT_PULLUP);
-  pinMode(beatsPerBarPinNum, INPUT_PULLUP);
   pinMode(resetButtonPinNum, INPUT_PULLUP);
+  // Set up the beatsPerBar 5 position switch pins as inputs
+  for (int i = 0; i < 5; i++) {
+    pinMode(beatsPerBarPins[i], INPUT_PULLUP);
+  }
   pinMode(clockBarPinNum, OUTPUT);
   pinMode(resetOutPinNum, OUTPUT);
   Serial.begin(9600);
@@ -41,9 +46,12 @@ void loop(){
     }
     else {
       debugln("----resetbutton---");
-      // TODO when we reset check state of switches for beatsPerBar and barsPerPhrase
+      // When reset button is pressed we reset the counters, 
+      // check if we need to change beats or bars and output a 
+      // high reset signal to the CD4033 counters to reset the seven segment leds
       barCounter = 0;
       beatCounter = 0;
+      changeBeatsAndBars();
       resetOutPin.write(HIGH);
       resetButtonPressed = 1;
     }
@@ -58,30 +66,26 @@ void loop(){
 // This function will be called whenever a rising edge is detected from the clock
 void incrementCounters(){
   debugln("-------clock------");
-
   clockBarPin.write(clockBarState);
   resetOutPin.write(resetPhrase);
-
   clockBarState = LOW;
   resetPhrase = LOW;
   beatCounter++;
   debug("beat ");
   debugln(beatCounter);
+  // End of measure, output HIGH clockbar on next clock signal
   if (beatCounter >= beatsPerBar){
     clockBarState = HIGH;
     barCounter++;
     beatCounter = 0;
   }
+  // End of phrase: reset counters, check for beats/bar changes, and output HIGH reset on next clock
   if (barCounter >= barsPerPhrase){
     resetPhrase = HIGH;
     barCounter = 0;
     beatCounter = 0;
-    // read phrase length, if HIGH set to 16 bars
-    barsPerPhrase = digitalRead(barsPerPhrasePinNum) ? 16 : 8;
-        beatsPerBar = 4; //TODO read from rotary switch?
-
+    changeBeatsAndBars();
   }
-
   debug("bar ");
   debugln(barCounter);
   debug("clockBar ");
@@ -90,11 +94,25 @@ void incrementCounters(){
   debugln(resetPhrase);
 }
 
-// TODO figure out different beat counters (4 or 8) based on switch
-// TODO figure out time signatures 4/4, 8/4, 6/8, 7/8 -> how to pick numerator and denominator?
-// IDEA: select numerator only with rotary encoder, 4,6,7,8,9,11,12,16 (8 position)
-//       denominator depends on clock signal sent:
-//       1ppqn (quarter notes): 4/4 select 4, 8/4 select 8, 11/4 select 11
-//       2ppqn (8ths): 4/4 select 8, 7/8 select 7, 11/8 select 11
-//       4ppqn (16ths); 4/4 select 16
+// HOW TO: Select time signatures. 
+// Using the 5 position switch we can pick the numerator of the time signature 4, 7, 8, 12, or 16. 
+// By passing different divisions of the clock to the clock input we can select the denominator of the time signature. 
+// Here are some example clock division inputs and some possible time signatures.
+// | ---- Clock Division ---- | ------------- Time Signatures --------------|
+// | 1ppqn (quarter notes)    | 4/4 select 4, 8/4 select 8, 7/4 select 7    |
+// | 2ppqn (8ths)             | 4/4 select 8, 7/8 select 7, 12/8 select 12  |
+// | 4ppqn (16ths)            | 4/4 select 16, 7/16 select 7, 3/4 select 12 |
 //
+void changeBeatsAndBars(){
+  // Read phrase length, if HIGH set to 16 bars, if LOW set to 8 bars
+  barsPerPhrase = digitalRead(barsPerPhrasePinNum) ? barsPerPhraseValues[1] : barsPerPhraseValues[0];
+  // REead 5 position switch to set beatsPerBar, 
+  // each switch position is connected to it's own input pullup
+  for (int i = 0; i < 5; i++) {
+    int switchState = digitalRead(beatsPerBarPins[i]);
+    if (switchState == LOW) {
+      beatsPerBar = beatsPerBarValues[i];
+      break;
+    }
+  }
+}
