@@ -103,6 +103,7 @@ void incrementCounters(){
 // | 2ppqn (8ths)             | 4/4 select 8, 7/8 select 7, 12/8 select 12  |
 // | 4ppqn (16ths)            | 4/4 select 16, 7/16 select 7, 3/4 select 12 |
 //
+// Changes to the barsPerPhrase and beatsPerBar switches will be picked up on the next phrase reset or when the reset button is pushed. 
 void changeBeatsAndBars(){
   // Read phrase length, if HIGH set to 16 bars, if LOW set to 8 bars
   barsPerPhrase = digitalRead(barsPerPhrasePinNum) ? barsPerPhraseValues[1] : barsPerPhraseValues[0];
