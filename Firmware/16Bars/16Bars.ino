@@ -77,9 +77,9 @@ void incrementCounters(){
   debugln("-------clock------");
   clockBarPin.write(clockBarState);
   resetOutPin.write(resetPhrase);
-  digitalWrite(firstBarPin, firstBar);
-  digitalWrite(middleBarPin, middleBar);
-  digitalWrite(lastBarPin, lastBar);
+  digitalWrite(firstBarOutPin, firstBar);
+  digitalWrite(middleBarOutPin, middleBar);
+  digitalWrite(lastBarOutPin, lastBar);
   
   // Reset output pins after writing any changes.
   // All these pins will output synchronously with the clock at the same 
