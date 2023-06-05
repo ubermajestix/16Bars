@@ -9,6 +9,9 @@ const byte barsPerPhrasePinNum = 6;
 const byte beatsPerBarPins[5] = {7, 8, 9, 10, 11};
 const byte beatsPerBarValues[5] = {4, 7, 8, 12, 16};
 const byte barsPerPhraseValues[2] = {8,16}; 
+const byte firstBarOutPin = 12;
+const byte middleBarOutPin = 13;
+const byte lastBarOutPin = 14;
 
 UberPin clockPin(clockPinNum);
 UberPin resetButtonPin(resetButtonPinNum, 5);
@@ -22,6 +25,9 @@ volatile byte beatsPerBar= beatsPerBarValues[0]; // Default is 4. Can be set to 
 volatile byte resetButtonPressed = 0;
 volatile bool clockBarState = LOW; // Led State, initially set to LOW
 volatile bool resetPhrase = LOW;
+volatile bool firstBar = LOW;
+volatile bool middleBar = LOW;
+volatile bool lastBar = LOW;
 
 void setup(){
   pinMode(clockPinNum, INPUT);
@@ -33,6 +39,9 @@ void setup(){
   }
   pinMode(clockBarPinNum, OUTPUT);
   pinMode(resetOutPinNum, OUTPUT);
+  pinMode(firstBarOutPin, OUTPUT);
+  pinMode(middleBarOutPin, OUTPUT);
+  pinMode(lastBarOutPin, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -68,8 +77,19 @@ void incrementCounters(){
   debugln("-------clock------");
   clockBarPin.write(clockBarState);
   resetOutPin.write(resetPhrase);
+  digitalWrite(firstBarPin, firstBar);
+  digitalWrite(middleBarPin, middleBar);
+  digitalWrite(lastBarPin, lastBar);
+  
+  // Reset output pins after writing any changes.
+  // All these pins will output synchronously with the clock at the same 
+  // length of the input clock pulse (~5 milliseconds).
   clockBarState = LOW;
   resetPhrase = LOW;
+  firstBar = LOW; // TODO first bar and reseet are the same thing. Can we reset the 4033's, light up an led, and input to a schmitt trigger with one pin?
+  middleBar = LOW;
+  lastBar = LOW;
+  
   beatCounter++;
   debug("beat ");
   debugln(beatCounter);
@@ -79,9 +99,19 @@ void incrementCounters(){
     barCounter++;
     beatCounter = 0;
   }
+  // Check for first, middle, and last bar. 
+  // TODO validate if this should happen AFTER incrementing barCounter.
+  // firstBar is the same as reset, handled below.
+  if(barCounter == barsPerPhrase/2){
+    middleBar = HIGH;
+  }
+  if(barCounter == barsPerPhrase - 1){
+    lastBar = HIGH;
+  }
   // End of phrase: reset counters, check for beats/bar changes, and output HIGH reset on next clock
   if (barCounter >= barsPerPhrase){
     resetPhrase = HIGH;
+    firstBar = HIGH;
     barCounter = 0;
     beatCounter = 0;
     changeBeatsAndBars();
