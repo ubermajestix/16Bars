@@ -7,11 +7,15 @@ const byte clockBarPinNum = 4;
 const byte resetOutPinNum = 5;
 const byte barsPerPhrasePinNum = 6;
 const byte beatsPerBarPins[5] = {7, 8, 9, 10, 11};
-const byte beatsPerBarValues[5] = {4, 7, 8, 12, 16};
-const byte barsPerPhraseValues[2] = {8,16}; 
 const byte firstBarOutPin = 12;
 const byte middleBarOutPin = 13;
-const byte lastBarOutPin = 14;
+const byte lastBarOutPin = A0;
+const byte firstBarLEDPin = A1;
+const byte middleBarLEDPin = A2;
+const byte lastBarLEDPin = A3;
+
+const byte beatsPerBarValues[5] = {4, 7, 8, 12, 16};
+const byte barsPerPhraseValues[2] = {8,16}; 
 
 UberPin clockPin(clockPinNum);
 UberPin resetButtonPin(resetButtonPinNum, 5);
@@ -25,7 +29,6 @@ volatile byte beatsPerBar= beatsPerBarValues[0]; // Default is 4. Can be set to 
 volatile byte resetButtonPressed = 0;
 volatile bool clockBarState = LOW; // Led State, initially set to LOW
 volatile bool resetPhrase = LOW;
-// TODO outputs to schmitt triggers need to be inverse, these should be high by default and set low.
 // TODO add separate extneral outputs for clockbar (firstbar == reset)
 // TODO add another out 1 measure before middle bar?
 volatile bool firstBar = LOW;
@@ -45,6 +48,9 @@ void setup(){
   pinMode(firstBarOutPin, OUTPUT);
   pinMode(middleBarOutPin, OUTPUT);
   pinMode(lastBarOutPin, OUTPUT);
+  pinMode(firstBarLEDPin, OUTPUT);
+  pinMode(middleBarLEDPin, OUTPUT);
+  pinMode(lastBarLEDPin, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -81,8 +87,12 @@ void incrementCounters(){
   clockBarPin.write(clockBarState);
   resetOutPin.write(resetPhrase);
   digitalWrite(firstBarOutPin, firstBar);
+  digitalWrite(firstBarLEDPin, firstBar);
   digitalWrite(middleBarOutPin, middleBar);
+  digitalWrite(middleBarLEDPin, middleBar);
   digitalWrite(lastBarOutPin, lastBar);
+  digitalWrite(lastBarLEDPin, lastBar);
+
   
   // Reset output pins after writing any changes.
   // All these pins will output synchronously with the clock at the same 
