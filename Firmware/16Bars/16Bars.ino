@@ -25,6 +25,9 @@ volatile byte beatsPerBar= beatsPerBarValues[0]; // Default is 4. Can be set to 
 volatile byte resetButtonPressed = 0;
 volatile bool clockBarState = LOW; // Led State, initially set to LOW
 volatile bool resetPhrase = LOW;
+// TODO outputs to schmitt triggers need to be inverse, these should be high by default and set low.
+// TODO add separate extneral outputs for clockbar (firstbar == reset)
+// TODO add another out 1 measure before middle bar?
 volatile bool firstBar = LOW;
 volatile bool middleBar = LOW;
 volatile bool lastBar = LOW;
