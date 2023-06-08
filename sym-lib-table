@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name "TDSR*")(type "KiCad")(uri "${KIPRJMOD}/Parts/symbols/TDSR0760/2023-01-04_21-55-18.kicad_sym")(options "")(descr ""))
+  (lib (name "SLB1570")(type "Legacy")(uri "${KIPRJMOD}/Parts/SLB1570.lib")(options "")(descr ""))
 )

@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model SLB1570
+#/831053/753170/2.50/7/4/Switch
+DEF SLB1570 S 0 30 Y Y 1 F N
+F0 "S" 850 300 50 H V L CNN
+F1 "SLB1570" 850 200 50 H V L CNN
+F2 "SLB1570" 850 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/SLB1570.pdf" 850 0 50 H I L CNN
+F4 "Slide Switches MINI SLIDE SWITCH" 850 -100 50 H I L CNN "Description"
+F5 "12.5" 850 -200 50 H I L CNN "Height"
+F6 "642-SLB1570" 850 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Apem/SLB1570?qs=i1KciFEqNAYRCX6bybaRtw%3D%3D" 850 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Apem" 850 -500 50 H I L CNN "Manufacturer_Name"
+F9 "SLB1570" 850 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 0 -100 200 R 50 50 0 0 P
+X 2 2 0 -200 200 R 50 50 0 0 P
+X 3 3 0 -300 200 R 50 50 0 0 P
+X 4 4 0 -400 200 R 50 50 0 0 P
+X 5 5 0 -500 200 R 50 50 0 0 P
+X COM_1 C1 0 0 200 R 50 50 0 0 P
+X COM_2 C2 0 -600 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 800 100 800 -700 200 -700 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
