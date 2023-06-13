@@ -1,0 +1,10 @@
+### Module positions - created on Tue Jun 13 10:27:50 2023 ###
+### Printed by Pcbnew version (6.0.1)
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val                  Package                               PosX       PosY       Rot  Side
+A1        Arduino_Nano_v3.x    Arduino_Nano                      -78.3600   -97.2500  180.0000  bottom
+C1        47uf                 CP_Radial_D5.0mm_P2.00mm          -72.5000   -44.0000  -90.0000  bottom
+J2        Conn_02x05_Odd_Even  PinHeader_2x05_P2.54mm_Vertical   -82.4000   -39.9000   90.0000  bottom
+Ref**     Val**                16WindsLogo-96                    -70.1000   -79.0000  180.0000  bottom
+## End

@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\carol\Documents\KiCad\16Bars\16Bars.kicad_sch</source>
+    <date>6/13/2023 11:26:56 AM</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>16Bars</title>
+        <company>16Winds</company>
+        <rev>2.0</rev>
+        <date>2023-02-07</date>
+        <source>16Bars.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="A1">
+      <value>Arduino_Nano_v3.x</value>
+      <footprint>Module:Arduino_Nano</footprint>
+      <datasheet>http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf</datasheet>
+      <libsource lib="MCU_Module" part="Arduino_Nano_v3.x" description="Arduino Nano v3.x"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dae1ea8a-32da-4426-8f99-becaad375e16</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>47uf</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.00mm</footprint>
+      <libsource lib="Device" part="C_Polarized_Small_US" description="Polarized capacitor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5f506440-0fcc-449f-9242-db683d2fb800</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>330pf</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C13533</field>
+        <field name="Manufacturer_Part_Number">C13533</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="LCSC" value="C13533"/>
+      <property name="Manufacturer_Part_Number" value="C13533"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fe000835-e8a4-4679-882e-e70705590baf</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="LCSC" value=""/>
+      <property name="Manufacturer_Part_Number" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d980f589-94db-4e8c-a557-c77cf5289868</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C2290</field>
+        <field name="Manufacturer_Part_Number">C2290</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="LCSC" value="C2290"/>
+      <property name="Manufacturer_Part_Number" value="C2290"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c5770ce1-c978-4228-b317-a57d324b9d89</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="LCSC" value=""/>
+      <property name="Manufacturer_Part_Number" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c2ffca7d-ce6e-4692-8456-5ea35f3d4877</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="LCSC" value=""/>
+      <property name="Manufacturer_Part_Number" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7d43e345-44dc-401b-b00a-103bb2aac13a</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>1N5819WS</value>
+      <footprint>Diode_SMD:D_SOD-323</footprint>
+      <datasheet>https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf</datasheet>
+      <fields>
+        <field name="LCSC">C191023</field>
+        <field name="Manufacturer_Part_Number">C191023</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="LCSC" value="C191023"/>
+      <property name="Manufacturer_Part_Number" value="C191023"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e7345934-2894-4e7e-a74d-b17dfb2dfe1a</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>1N5819WS</value>
+      <footprint>Diode_SMD:D_SOD-323</footprint>
+      <datasheet>https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf</datasheet>
+      <fields>
+        <field name="LCSC">C191023</field>
+        <field name="Manufacturer_Part_Number">C191023</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="LCSC" value="C191023"/>
+      <property name="Manufacturer_Part_Number" value="C191023"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4d3b4f9f-492f-4b30-be0c-f2f16e570b41</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>3.5mm_Mono_Switched</value>
+      <footprint>4ms_Jack:EighthInch_PJ398SM</footprint>
+      <datasheet>http://www.qingpu-electronics.com/en/products/wqp-pj398sm-362.html</datasheet>
+      <fields>
+        <field name="Manufacturer">Wenzhou QingPu Electronics Co</field>
+        <field name="Part Number">WQP-WQP518MA</field>
+        <field name="Specifications">Audio 3.5mm Jack, mono, switched, PC-pin Vertical</field>
+      </fields>
+      <libsource lib="4ms_Jack" part="3.5mm_Mono_Switched" description="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="Specifications" value="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="Manufacturer" value="Wenzhou QingPu Electronics Co"/>
+      <property name="Part Number" value="WQP-WQP518MA"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8b13a837-9fd2-4f87-ada6-b3171746bca0</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_02x05_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x05_Odd_Even" description="Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8b5f2542-2061-4472-82ef-d18706021de3</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x04</value>
+      <footprint>4ms_Connector:Pins_1x04_2.54mm_TH_SWD</footprint>
+      <fields>
+        <field name="Manufacturer">TAD</field>
+        <field name="Part Number">1-0401FBV0T</field>
+        <field name="Specifications">HEADER 1x4 MALE PINS 0.100” 180deg</field>
+      </fields>
+      <libsource lib="4ms_Connector" part="Conn_01x04" description="HEADER 1x4 MALE PINS 0.100” 180deg"/>
+      <property name="Specifications" value="HEADER 1x4 MALE PINS 0.100” 180deg"/>
+      <property name="Manufacturer" value="TAD"/>
+      <property name="Part Number" value="1-0401FBV0T"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ca57bf1-8adb-4249-8426-1dd0536a1f91</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>3.5mm_Mono_Switched</value>
+      <footprint>4ms_Jack:EighthInch_PJ398SM</footprint>
+      <datasheet>http://www.qingpu-electronics.com/en/products/wqp-pj398sm-362.html</datasheet>
+      <fields>
+        <field name="Manufacturer">Wenzhou QingPu Electronics Co</field>
+        <field name="Part Number">WQP-WQP518MA</field>
+        <field name="Specifications">Audio 3.5mm Jack, mono, switched, PC-pin Vertical</field>
+      </fields>
+      <libsource lib="4ms_Jack" part="3.5mm_Mono_Switched" description="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="Specifications" value="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="Manufacturer" value="Wenzhou QingPu Electronics Co"/>
+      <property name="Part Number" value="WQP-WQP518MA"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>085b19f6-c75d-441b-8cba-0d7970201533</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>3.5mm_Mono_Switched</value>
+      <footprint>4ms_Jack:EighthInch_PJ398SM</footprint>
+      <datasheet>http://www.qingpu-electronics.com/en/products/wqp-pj398sm-362.html</datasheet>
+      <fields>
+        <field name="Manufacturer">Wenzhou QingPu Electronics Co</field>
+        <field name="Part Number">WQP-WQP518MA</field>
+        <field name="Specifications">Audio 3.5mm Jack, mono, switched, PC-pin Vertical</field>
+      </fields>
+      <libsource lib="4ms_Jack" part="3.5mm_Mono_Switched" description="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="Specifications" value="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="Manufacturer" value="Wenzhou QingPu Electronics Co"/>
+      <property name="Part Number" value="WQP-WQP518MA"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>88b489dc-5007-4bf0-b576-79129878f20d</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>3.5mm_Mono_Switched</value>
+      <footprint>4ms_Jack:EighthInch_PJ398SM</footprint>
+      <datasheet>http://www.qingpu-electronics.com/en/products/wqp-pj398sm-362.html</datasheet>
+      <fields>
+        <field name="Manufacturer">Wenzhou QingPu Electronics Co</field>
+        <field name="Part Number">WQP-WQP518MA</field>
+        <field name="Specifications">Audio 3.5mm Jack, mono, switched, PC-pin Vertical</field>
+      </fields>
+      <libsource lib="4ms_Jack" part="3.5mm_Mono_Switched" description="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="Specifications" value="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="Manufacturer" value="Wenzhou QingPu Electronics Co"/>
+      <property name="Part Number" value="WQP-WQP518MA"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e83aaa70-7bb4-4a7a-85ac-1c3758a8f830</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C25117</field>
+        <field name="Manufacturer_Part_Number">C4109</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C25117"/>
+      <property name="Manufacturer_Part_Number" value="C4109"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1b512e00-f29f-4fe5-bc1c-e76b42eb948f</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C25117</field>
+        <field name="Manufacturer_Part_Number">C4109</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C25117"/>
+      <property name="Manufacturer_Part_Number" value="C4109"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b9c8222a-e057-41d6-b54c-b389ff44d23b</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C25117</field>
+        <field name="Manufacturer_Part_Number">C4109</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C25117"/>
+      <property name="Manufacturer_Part_Number" value="C4109"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>22c57990-6b78-4f18-8ec6-f1540678b43e</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C25117</field>
+        <field name="Manufacturer_Part_Number">C25792</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C25117"/>
+      <property name="Manufacturer_Part_Number" value="C25792"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7a58442-8471-47d1-8f65-f9b0cc04ffba</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C4109</field>
+        <field name="Manufacturer_Part_Number">C4109</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C4109"/>
+      <property name="Manufacturer_Part_Number" value="C4109"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dad1d64b-3569-43b9-bb15-49d4a19ce4b4</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>2K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C4109</field>
+        <field name="Manufacturer_Part_Number">C4109</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C4109"/>
+      <property name="Manufacturer_Part_Number" value="C4109"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a25253b3-4f96-4d5c-be19-881867b85c5f</tstamps>
+    </comp>
+    <comp ref="S1">
+      <value>SLB1570</value>
+      <footprint>SLB1570</footprint>
+      <datasheet>https://componentsearchengine.com/Datasheets/1/SLB1570.pdf</datasheet>
+      <fields>
+        <field name="Description">Slide Switches MINI SLIDE SWITCH</field>
+        <field name="Height">12.5</field>
+        <field name="Manufacturer_Name">Apem</field>
+        <field name="Manufacturer_Part_Number">SLB1570</field>
+        <field name="Mouser Part Number">642-SLB1570</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Apem/SLB1570?qs=i1KciFEqNAYRCX6bybaRtw%3D%3D</field>
+      </fields>
+      <libsource lib="SLB1570" part="SLB1570" description="Slide Switches MINI SLIDE SWITCH"/>
+      <property name="Description" value="Slide Switches MINI SLIDE SWITCH"/>
+      <property name="Height" value="12.5"/>
+      <property name="Mouser Part Number" value="642-SLB1570"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Apem/SLB1570?qs=i1KciFEqNAYRCX6bybaRtw%3D%3D"/>
+      <property name="Manufacturer_Name" value="Apem"/>
+      <property name="Manufacturer_Part_Number" value="SLB1570"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bf9c00b9-2547-419a-894c-9a0d673e663e</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Push_LED_Thonk_Low_Profile</value>
+      <footprint>TDSR*:ThonkLowProfileButton</footprint>
+      <datasheet>Datasheets/LowProfileButton.pdf</datasheet>
+      <libsource lib="TDSR*" part="SW_Push_LED_Thonk_Low_Profile" description="Push button switch with LED, generic"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8b86c1c9-cfb9-49b2-bb41-9ca31170ff9d</tstamps>
+    </comp>
+    <comp ref="SW3">
+      <value>SW_SPDT-EG1249</value>
+      <footprint>EG1249</footprint>
+      <datasheet>https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA5/426734.pdf</datasheet>
+      <fields>
+        <field name="Description">Slide Switches SPDT 6MM LEVER</field>
+        <field name="Height">14.5</field>
+        <field name="Manufacturer_Name">E-Switch</field>
+        <field name="Manufacturer_Part_Number">EG1249</field>
+        <field name="Mouser Part Number">612-EG1249</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/E-Switch/EG1249?qs=HKd%2Fp3M7KlWui1pwdUluqA%3D%3D</field>
+        <field name="Notes">Mouse has a variety of switches, needs to be ON ON ON</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="EG1249-On-On" description="Slide Switches SPDT 6MM LEVER"/>
+      <property name="Notes" value="Mouse has a variety of switches, needs to be ON ON ON"/>
+      <property name="Description" value="Slide Switches SPDT 6MM LEVER"/>
+      <property name="Height" value="14.5"/>
+      <property name="Mouser Part Number" value="612-EG1249"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/E-Switch/EG1249?qs=HKd%2Fp3M7KlWui1pwdUluqA%3D%3D"/>
+      <property name="Manufacturer_Name" value="E-Switch"/>
+      <property name="Manufacturer_Part_Number" value="EG1249"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>41613b88-4d66-4377-a8c7-96e52cc4c696</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="4ms_Connector" part="Conn_01x04">
+      <description>HEADER 1x4 MALE PINS 0.100” 180deg</description>
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+        <fp>Socket?Strip?Straight?1X*</fp>
+        <fp>Socket?Strip?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint">4ms_Connector:Pins_1x04_2.54mm_TH_SWD</field>
+        <field name="Specifications">HEADER 1x4 MALE PINS 0.100” 180deg</field>
+        <field name="Manufacturer">TAD</field>
+        <field name="Part Number">1-0401FBV0T</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="4ms_Jack" part="3.5mm_Mono_Switched">
+      <description>Audio 3.5mm Jack, mono, switched, PC-pin Vertical</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">3.5mm_Mono_Switched</field>
+        <field name="Footprint">4ms_Jack:EighthInch_PJ398SM</field>
+        <field name="Specifications">Audio 3.5mm Jack, mono, switched, PC-pin Vertical</field>
+        <field name="Manufacturer">Wenzhou QingPu Electronics Co</field>
+        <field name="Part Number">WQP-WQP518MA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SIG" type="passive"/>
+        <pin num="2" name="SHEILD" type="passive"/>
+        <pin num="3" name="SW" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x05_Odd_Even">
+      <description>Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x05_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized_Small_US">
+      <description>Polarized capacitor, small US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized_Small_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Module" part="Arduino_Nano_v3.x">
+      <description>Arduino Nano v3.x</description>
+      <docs>http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf</docs>
+      <footprints>
+        <fp>Arduino*Nano*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Arduino_Nano_v3.x</field>
+        <field name="Footprint">Module:Arduino_Nano</field>
+        <field name="Datasheet">http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D1/TX" type="bidirectional"/>
+        <pin num="2" name="D0/RX" type="bidirectional"/>
+        <pin num="3" name="~{RESET}" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="D2" type="bidirectional"/>
+        <pin num="6" name="D3" type="bidirectional"/>
+        <pin num="7" name="D4" type="bidirectional"/>
+        <pin num="8" name="D5" type="bidirectional"/>
+        <pin num="9" name="D6" type="bidirectional"/>
+        <pin num="10" name="D7" type="bidirectional"/>
+        <pin num="11" name="D8" type="bidirectional"/>
+        <pin num="12" name="D9" type="bidirectional"/>
+        <pin num="13" name="D10" type="bidirectional"/>
+        <pin num="14" name="D11" type="bidirectional"/>
+        <pin num="15" name="D12" type="bidirectional"/>
+        <pin num="16" name="D13" type="bidirectional"/>
+        <pin num="17" name="3V3" type="power_out"/>
+        <pin num="18" name="AREF" type="input"/>
+        <pin num="19" name="A0" type="bidirectional"/>
+        <pin num="20" name="A1" type="bidirectional"/>
+        <pin num="21" name="A2" type="bidirectional"/>
+        <pin num="22" name="A3" type="bidirectional"/>
+        <pin num="23" name="A4" type="bidirectional"/>
+        <pin num="24" name="A5" type="bidirectional"/>
+        <pin num="25" name="A6" type="bidirectional"/>
+        <pin num="26" name="A7" type="bidirectional"/>
+        <pin num="27" name="+5V" type="power_out"/>
+        <pin num="28" name="~{RESET}" type="input"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SLB1570" part="SLB1570">
+      <description>Slide Switches MINI SLIDE SWITCH</description>
+      <docs>https://componentsearchengine.com/Datasheets/1/SLB1570.pdf</docs>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">SLB1570</field>
+        <field name="Footprint">SLB1570</field>
+        <field name="Datasheet">https://componentsearchengine.com/Datasheets/1/SLB1570.pdf</field>
+        <field name="Description">Slide Switches MINI SLIDE SWITCH</field>
+        <field name="Height">12.5</field>
+        <field name="Mouser Part Number">642-SLB1570</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Apem/SLB1570?qs=i1KciFEqNAYRCX6bybaRtw%3D%3D</field>
+        <field name="Manufacturer_Name">Apem</field>
+        <field name="Manufacturer_Part_Number">SLB1570</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="C1" name="COM_1" type="passive"/>
+        <pin num="C2" name="COM_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SamacSys_Parts" part="EG1249-On-On">
+      <description>Slide Switches SPDT 6MM LEVER</description>
+      <docs>https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA5/426734.pdf</docs>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">EG1249-On-On</field>
+        <field name="Footprint">EG1249</field>
+        <field name="Datasheet">https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA5/426734.pdf</field>
+        <field name="Description">Slide Switches SPDT 6MM LEVER</field>
+        <field name="Height">14.5</field>
+        <field name="Mouser Part Number">612-EG1249</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/E-Switch/EG1249?qs=HKd%2Fp3M7KlWui1pwdUluqA%3D%3D</field>
+        <field name="Manufacturer_Name">E-Switch</field>
+        <field name="Manufacturer_Part_Number">EG1249</field>
+      </fields>
+      <pins>
+        <pin num="1" name="N.C." type="passive"/>
+        <pin num="2" name="COM" type="passive"/>
+        <pin num="3" name="N.O." type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TDSR*" part="SW_Push_LED_Thonk_Low_Profile">
+      <description>Push button switch with LED, generic</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push_LED_Thonk_Low_Profile</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="L1" name="L1" type="passive"/>
+        <pin num="L2" name="L2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="4ms_Connector">
+      <uri>C:\Users\carol\Documents\KiCad\6.0\3rdparty/symbols/com_github_4ms_4ms-kicad-lib/4ms_Connector.kicad_sym</uri>
+    </library>
+    <library logical="4ms_Jack">
+      <uri>C:\Users\carol\Documents\KiCad\6.0\3rdparty/symbols/com_github_4ms_4ms-kicad-lib/4ms_Jack.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="MCU_Module">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/MCU_Module.kicad_sym</uri>
+    </library>
+    <library logical="SLB1570">
+      <uri>C:\Users\carol\Documents\KiCad\16Bars/Parts/SLB1570.lib</uri>
+    </library>
+    <library logical="SamacSys_Parts">
+      <uri>C:\Users\carol\Documents\KiCad\6.0\3rdparty/SamacSys_Parts.kicad_sym</uri>
+    </library>
+    <library logical="TDSR*">
+      <uri>C:\Users\carol\Documents\KiCad\16Bars/Parts/symbols/TDSR0760/2023-01-04_21-55-18.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="A1" pin="27" pinfunction="+5V" pintype="power_out"/>
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="S1" pin="C1" pinfunction="COM_1" pintype="passive"/>
+      <node ref="S1" pin="C2" pinfunction="COM_2" pintype="passive"/>
+      <node ref="SW3" pin="1" pinfunction="N.C." pintype="passive"/>
+    </net>
+    <net code="2" name="+12V">
+      <node ref="A1" pin="30" pinfunction="VIN" pintype="power_in"/>
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="3" name="/ResetButton">
+      <node ref="A1" pin="6" pinfunction="D3" pintype="bidirectional"/>
+      <node ref="SW1" pin="4" pinfunction="4" pintype="passive"/>
+    </net>
+    <net code="4" name="/barsPerBar-4">
+      <node ref="A1" pin="10" pinfunction="D7" pintype="bidirectional"/>
+      <node ref="S1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="5" name="/barsPerBar-7">
+      <node ref="A1" pin="11" pinfunction="D8" pintype="bidirectional"/>
+      <node ref="S1" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="6" name="/barsPerBar-8">
+      <node ref="A1" pin="12" pinfunction="D9" pintype="bidirectional"/>
+      <node ref="S1" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="7" name="/barsPerBar-12">
+      <node ref="A1" pin="13" pinfunction="D10" pintype="bidirectional"/>
+      <node ref="S1" pin="4" pinfunction="4" pintype="passive"/>
+    </net>
+    <net code="8" name="/barsPerBar-16">
+      <node ref="A1" pin="14" pinfunction="D11" pintype="bidirectional"/>
+      <node ref="S1" pin="5" pinfunction="5" pintype="passive"/>
+    </net>
+    <net code="9" name="/barsPerPhrase">
+      <node ref="A1" pin="9" pinfunction="D6" pintype="bidirectional"/>
+      <node ref="SW3" pin="2" pinfunction="COM" pintype="passive"/>
+    </net>
+    <net code="10" name="/firstBar">
+      <node ref="A1" pin="15" pinfunction="D12" pintype="bidirectional"/>
+      <node ref="J4" pin="1" pinfunction="SIG" pintype="passive"/>
+    </net>
+    <net code="11" name="/firstBarLED">
+      <node ref="A1" pin="20" pinfunction="A1" pintype="bidirectional"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="12" name="/lastBar">
+      <node ref="A1" pin="19" pinfunction="A0" pintype="bidirectional"/>
+      <node ref="J6" pin="1" pinfunction="SIG" pintype="passive"/>
+    </net>
+    <net code="13" name="/lastBarLED">
+      <node ref="A1" pin="22" pinfunction="A3" pintype="bidirectional"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="14" name="/middleBar">
+      <node ref="A1" pin="16" pinfunction="D13" pintype="bidirectional"/>
+      <node ref="J5" pin="1" pinfunction="SIG" pintype="passive"/>
+    </net>
+    <net code="15" name="/middleBarLED">
+      <node ref="A1" pin="21" pinfunction="A2" pintype="bidirectional"/>
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="16" name="CLOCK_BAR">
+      <node ref="A1" pin="7" pinfunction="D4" pintype="bidirectional"/>
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="17" name="CLOCK_IN">
+      <node ref="A1" pin="5" pinfunction="D2" pintype="bidirectional"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="L1" pinfunction="L1" pintype="passive"/>
+    </net>
+    <net code="18" name="GND">
+      <node ref="A1" pin="29" pinfunction="GND" pintype="power_in"/>
+      <node ref="A1" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="SHEILD" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="SW" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J2" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J2" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J2" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="SHEILD" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="SW" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="SHEILD" pintype="passive"/>
+      <node ref="J5" pin="3" pinfunction="SW" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="SHEILD" pintype="passive"/>
+      <node ref="J6" pin="3" pinfunction="SW" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW3" pin="3" pinfunction="N.O." pintype="passive"/>
+      <node ref="SW3" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="SW3" pin="5" pinfunction="5" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(D4-Pad1)">
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(R15-Pad2)">
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="L2" pinfunction="L2" pintype="passive"/>
+    </net>
+    <net code="25" name="RESET">
+      <node ref="A1" pin="8" pinfunction="D5" pintype="bidirectional"/>
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="26" name="unconnected-(A1-Pad1)">
+      <node ref="A1" pin="1" pinfunction="D1/TX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(A1-Pad2)">
+      <node ref="A1" pin="2" pinfunction="D0/RX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(A1-Pad3)">
+      <node ref="A1" pin="3" pinfunction="~{RESET}" pintype="input+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(A1-Pad17)">
+      <node ref="A1" pin="17" pinfunction="3V3" pintype="power_out+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(A1-Pad18)">
+      <node ref="A1" pin="18" pinfunction="AREF" pintype="input+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(A1-Pad23)">
+      <node ref="A1" pin="23" pinfunction="A4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(A1-Pad24)">
+      <node ref="A1" pin="24" pinfunction="A5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(A1-Pad25)">
+      <node ref="A1" pin="25" pinfunction="A6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(A1-Pad26)">
+      <node ref="A1" pin="26" pinfunction="A7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(A1-Pad28)">
+      <node ref="A1" pin="28" pinfunction="~{RESET}" pintype="input+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(J2-Pad9)">
+      <node ref="J2" pin="9" pinfunction="Pin_9" pintype="passive+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(J2-Pad10)">
+      <node ref="J2" pin="10" pinfunction="Pin_10" pintype="passive+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(SW1-Pad2)">
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(SW1-Pad3)">
+      <node ref="SW1" pin="3" pinfunction="3" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
