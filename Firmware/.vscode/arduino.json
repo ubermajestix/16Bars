@@ -3,5 +3,5 @@
     "configuration": "cpu=atmega328old",
     "board": "arduino:avr:nano",
     "output": "./ArduinoOutput",
-    "port": "COM3"
+    "port": "COM4"
 }

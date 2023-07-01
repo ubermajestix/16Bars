@@ -5,14 +5,19 @@ const byte clockPinNum = 2;
 const byte resetButtonPinNum = 3;
 const byte clockBarPinNum = 4;
 const byte resetOutPinNum = 5;
-const byte barsPerPhrasePinNum = 6;
+// FIXME Pin 6 is not reading correctly, need to jumper PCB from D6 to A4
+// const byte barsPerPhrasePinNum = 6;
+const byte barsPerPhrasePinNum = A4;
 const byte beatsPerBarPins[5] = {7, 8, 9, 10, 11};
+// FIXME PCB layout put LEDs in the wrong spots, swapping pins to fix it.
 const byte firstBarOutPin = 12;
 const byte middleBarOutPin = 13;
-const byte lastBarOutPin = A0;
 const byte firstBarLEDPin = A1;
-const byte middleBarLEDPin = A2;
-const byte lastBarLEDPin = A3;
+// const byte middleBarLEDPin = A2;
+const byte middleBarLEDPin = A3;
+const byte lastBarOutPin = A0;
+const byte lastBarLEDPin = A2;
+// const byte lastBarLEDPin = A3;
 
 const byte beatsPerBarValues[5] = {4, 7, 8, 12, 16};
 const byte barsPerPhraseValues[2] = {8,16}; 
@@ -41,15 +46,15 @@ void setup(){
   pinMode(resetButtonPinNum, INPUT_PULLUP);
   // Set up the beatsPerBar 5 position switch pins as inputs
   for (int i = 0; i < 5; i++) {
-    pinMode(beatsPerBarPins[i], INPUT_PULLUP);
+    pinMode(beatsPerBarPins[i], INPUT);
   }
   pinMode(clockBarPinNum, OUTPUT);
   pinMode(resetOutPinNum, OUTPUT);
   pinMode(firstBarOutPin, OUTPUT);
-  pinMode(middleBarOutPin, OUTPUT);
-  pinMode(lastBarOutPin, OUTPUT);
   pinMode(firstBarLEDPin, OUTPUT);
+  pinMode(middleBarOutPin, OUTPUT);
   pinMode(middleBarLEDPin, OUTPUT);
+  pinMode(lastBarOutPin, OUTPUT);
   pinMode(lastBarLEDPin, OUTPUT);
   Serial.begin(9600);
 }
@@ -69,6 +74,15 @@ void loop(){
       // high reset signal to the CD4033 counters to reset the seven segment leds
       barCounter = 0;
       beatCounter = 0;
+      firstBar = LOW;
+      middleBar = LOW;
+      lastBar = LOW;
+      digitalWrite(firstBarOutPin, firstBar);
+      digitalWrite(firstBarLEDPin, firstBar);
+      digitalWrite(middleBarOutPin, middleBar);
+      digitalWrite(middleBarLEDPin, middleBar);
+      digitalWrite(lastBarOutPin, lastBar);
+      digitalWrite(lastBarLEDPin, lastBar);
       changeBeatsAndBars();
       resetOutPin.write(HIGH);
       resetButtonPressed = 1;
@@ -84,6 +98,9 @@ void loop(){
 // This function will be called whenever a rising edge is detected from the clock
 void incrementCounters(){
   debugln("-------clock------");
+  if(barCounter == 0){
+    firstBar = HIGH;
+  }
   clockBarPin.write(clockBarState);
   resetOutPin.write(resetPhrase);
   digitalWrite(firstBarOutPin, firstBar);
@@ -115,6 +132,7 @@ void incrementCounters(){
   // Check for first, middle, and last bar. 
   // TODO validate if this should happen AFTER incrementing barCounter.
   // firstBar is the same as reset, handled below.
+ 
   if(barCounter == barsPerPhrase/2){
     middleBar = HIGH;
   }
@@ -124,17 +142,16 @@ void incrementCounters(){
   // End of phrase: reset counters, check for beats/bar changes, and output HIGH reset on next clock
   if (barCounter >= barsPerPhrase){
     resetPhrase = HIGH;
-    firstBar = HIGH;
     barCounter = 0;
     beatCounter = 0;
     changeBeatsAndBars();
   }
-  debug("bar ");
-  debugln(barCounter);
-  debug("clockBar ");
-  debugln(clockBarState);
-  debug("reset ");
-  debugln(resetPhrase);
+  debug("reset: "); debugln(resetPhrase);
+  debug("clockBar: "); debug(clockBarState); debug("/"); debugln(barsPerPhrase);
+  debug("bar: "); debugln(barCounter);
+  debug("firstbar: "); debugln(firstBar); 
+  debug("middlebar: "); debugln(middleBar); 
+  debug("lastbar: "); debugln(lastBar); 
 }
 
 // HOW TO: Select time signatures. 
@@ -150,13 +167,20 @@ void incrementCounters(){
 void changeBeatsAndBars(){
   // Read phrase length, if HIGH set to 16 bars, if LOW set to 8 bars
   barsPerPhrase = digitalRead(barsPerPhrasePinNum) ? barsPerPhraseValues[1] : barsPerPhraseValues[0];
+  debug("bars "); debug(barsPerPhrasePinNum); debug(" "); debug(digitalRead(barsPerPhrasePinNum)); debug(" "); debugln(barsPerPhrase);
   // REead 5 position switch to set beatsPerBar, 
   // each switch position is connected to it's own input pullup
   for (int i = 0; i < 5; i++) {
     int switchState = digitalRead(beatsPerBarPins[i]);
-    if (switchState == LOW) {
+    debug("beatsPin "); debug(beatsPerBarPins[i]); debug(" "); debugln(switchState);
+    if (switchState == HIGH) {
       beatsPerBar = beatsPerBarValues[i];
       break;
     }
+    // If we looped through all the pins but none are reading high, set beatsPerBar to 4
+    if (i == 4 && switchState == LOW){
+      beatsPerBar = 4;
+    }
   }
+  debug("changeBeatsAndBars "); debug("beats "); debug(beatsPerBar); debug(" bars "); debugln(barsPerPhrase);
 }

@@ -43,8 +43,8 @@ bool UberPin::changed()
       direction = changedState > lastState;
       // if(_pin == 2)
       // {
-      debug("changed pin "); debug(_pin);
-      debug(" current "); debug(currentState); debug(" last "); debug(lastState); debug(" direction "); debugln(direction);
+      // debug("changed pin "); debug(_pin);
+      // debug(" current "); debug(currentState); debug(" last "); debug(lastState); debug(" direction "); debugln(direction);
       // }
     }
     else{
