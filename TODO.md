@@ -7,3 +7,4 @@
 9. Probably need to move to Schmitt trigger, does JLC have SMD? This would help condition outputs to correct voltage and protect Nano from modular craziness. 
 10. SeverSegment - assemble with ICs on top for more space
 11. Use 2x 01x02 connectors for seven segment to make it more mechanically stable.
+12. Change name from Boreas to Aparctias. Boreas wasn't a nice god of wind. 
