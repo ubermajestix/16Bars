@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\carol\Documents\KiCad\16Bars\SevenSegment\SevenSegment.kicad_sch</source>
+    <date>7/6/2023 12:12:07 PM</date>
+    <tool>Eeschema 7.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>SevenSegment.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100nf</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C1525</field>
+        <field name="Manufacturer_Part_Number">C1525</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="Manufacturer_Part_Number" value="C1525"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8d18256-d14a-4e96-a3f9-ec2c436016c0</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100nf</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C1525</field>
+        <field name="Manufacturer_Part_Number">C1525</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C1525"/>
+      <property name="Manufacturer_Part_Number" value="C1525"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec7ed5ff-9008-4f24-a5ab-456267d82c86</tstamps>
+    </comp>
+    <comp ref="DS-ONES1">
+      <value>TDSR0760</value>
+      <footprint>TDSR0760:TDSR0760</footprint>
+      <datasheet>https://www.vishay.com/docs/81163/tdsr0750.pdf</datasheet>
+      <fields>
+        <field name="Description">Display Segmented 1DIGIT 8LED Hi-Int Red</field>
+        <field name="Height">7.2</field>
+        <field name="Manufacturer_Name">Vishay</field>
+        <field name="Manufacturer_Part_Number">TDSR0760</field>
+        <field name="Mouser Part Number">78-TDSR0760</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/TDSR0760?qs=RzxYCzJDjPUsfuITQhx9uw%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="TDSR0760" description="Display Segmented 1DIGIT 8LED Hi-Int Red"/>
+      <property name="Description" value="Display Segmented 1DIGIT 8LED Hi-Int Red"/>
+      <property name="Height" value="7.2"/>
+      <property name="Mouser Part Number" value="78-TDSR0760"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/TDSR0760?qs=RzxYCzJDjPUsfuITQhx9uw%3D%3D"/>
+      <property name="Manufacturer_Name" value="Vishay"/>
+      <property name="Manufacturer_Part_Number" value="TDSR0760"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="Display Segmented 1DIGIT 8LED Hi-Int Red"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>54d94598-197c-46df-90fb-d28b95decf8f</tstamps>
+    </comp>
+    <comp ref="DS-TENS1">
+      <value>TDSR0760</value>
+      <footprint>TDSR0760:TDSR0760</footprint>
+      <datasheet>https://www.vishay.com/docs/81163/tdsr0750.pdf</datasheet>
+      <fields>
+        <field name="Description">Display Segmented 1DIGIT 8LED Hi-Int Red</field>
+        <field name="Height">7.2</field>
+        <field name="Manufacturer_Name">Vishay</field>
+        <field name="Manufacturer_Part_Number">TDSR0760</field>
+        <field name="Mouser Part Number">78-TDSR0760</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/TDSR0760?qs=RzxYCzJDjPUsfuITQhx9uw%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="TDSR0760" description="Display Segmented 1DIGIT 8LED Hi-Int Red"/>
+      <property name="Description" value="Display Segmented 1DIGIT 8LED Hi-Int Red"/>
+      <property name="Height" value="7.2"/>
+      <property name="Mouser Part Number" value="78-TDSR0760"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/TDSR0760?qs=RzxYCzJDjPUsfuITQhx9uw%3D%3D"/>
+      <property name="Manufacturer_Name" value="Vishay"/>
+      <property name="Manufacturer_Part_Number" value="TDSR0760"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="Display Segmented 1DIGIT 8LED Hi-Int Red"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>95d8f92f-7e60-41d0-91d0-b30c476c1e18</tstamps>
+    </comp>
+    <comp ref="IC1">
+      <value>CD4033BE</value>
+      <footprint>DIP794W53P254L1930H508Q16N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/cd4033b.pdf</datasheet>
+      <fields>
+        <field name="Description">CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking</field>
+        <field name="Height">5.08</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">CD4033BE</field>
+        <field name="Mouser Part Number">595-CD4033BE</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4033BE?qs=3FVjRv9mUZ8rpHZqAc%252BFuA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="CD4033BE" description="CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking"/>
+      <property name="Description" value="CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking"/>
+      <property name="Height" value="5.08"/>
+      <property name="Mouser Part Number" value="595-CD4033BE"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4033BE?qs=3FVjRv9mUZ8rpHZqAc%252BFuA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Texas Instruments"/>
+      <property name="Manufacturer_Part_Number" value="CD4033BE"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1080ed7b-9a4b-4931-9590-b5a4b4174893</tstamps>
+    </comp>
+    <comp ref="IC2">
+      <value>CD4033BE</value>
+      <footprint>DIP794W53P254L1930H508Q16N</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/cd4033b.pdf</datasheet>
+      <fields>
+        <field name="Description">CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking</field>
+        <field name="Height">5.08</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">CD4033BE</field>
+        <field name="Mouser Part Number">595-CD4033BE</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4033BE?qs=3FVjRv9mUZ8rpHZqAc%252BFuA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="CD4033BE" description="CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking"/>
+      <property name="Description" value="CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking"/>
+      <property name="Height" value="5.08"/>
+      <property name="Mouser Part Number" value="595-CD4033BE"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4033BE?qs=3FVjRv9mUZ8rpHZqAc%252BFuA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Texas Instruments"/>
+      <property name="Manufacturer_Part_Number" value="CD4033BE"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3ddaa9fc-233b-4483-9173-98cdd0973cff</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x04</value>
+      <footprint>4ms_Connector:Pins_1x04_2.54mm_TH_SWD</footprint>
+      <fields>
+        <field name="Manufacturer">TAD</field>
+        <field name="Part Number">1-0401FBV0T</field>
+        <field name="Specifications">HEADER 1x4 MALE PINS 0.100” 180deg</field>
+      </fields>
+      <libsource lib="4ms_Connector" part="Conn_01x04" description="HEADER 1x4 MALE PINS 0.100” 180deg"/>
+      <property name="Specifications" value="HEADER 1x4 MALE PINS 0.100” 180deg"/>
+      <property name="Manufacturer" value="TAD"/>
+      <property name="Part Number" value="1-0401FBV0T"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="HEADER 1x4 MALE PINS 0.100” 180deg"/>
+      <property name="ki_keywords" value="Conn_01x04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6f75cb76-7ca2-4b3d-b56d-c5bf6c6c4473</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer_Part_Number">C25744</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer_Part_Number" value="C25744"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ee148b20-d389-4b69-b193-e806d90492d1</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer_Part_Number">C25744</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer_Part_Number" value="C25744"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dc7427de-953e-4b0f-aacb-4956a2c21020</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer_Part_Number">C25744</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer_Part_Number" value="C25744"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8c934ba7-0fb9-423a-a915-1d9b85a831be</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer_Part_Number">C25744</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer_Part_Number" value="C25744"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SevenSegment.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>91a8dc75-c1fb-4fdd-80c3-58caee0d7ab4</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="4ms_Connector" part="Conn_01x04">
+      <description>HEADER 1x4 MALE PINS 0.100” 180deg</description>
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+        <fp>Socket?Strip?Straight?1X*</fp>
+        <fp>Socket?Strip?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint">4ms_Connector:Pins_1x04_2.54mm_TH_SWD</field>
+        <field name="Specifications">HEADER 1x4 MALE PINS 0.100” 180deg</field>
+        <field name="Manufacturer">TAD</field>
+        <field name="Part Number">1-0401FBV0T</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SamacSys_Parts" part="CD4033BE">
+      <description>CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking</description>
+      <docs>http://www.ti.com/lit/ds/symlink/cd4033b.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">CD4033BE</field>
+        <field name="Footprint">DIP794W53P254L1930H508Q16N</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/cd4033b.pdf</field>
+        <field name="Description">CMOS Decade Counter/Divider with Decoded 7-Segment Display Outputs and Ripple Blanking</field>
+        <field name="Height">5.08</field>
+        <field name="Mouser Part Number">595-CD4033BE</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4033BE?qs=3FVjRv9mUZ8rpHZqAc%252BFuA%3D%3D</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">CD4033BE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CLOCK" type="input"/>
+        <pin num="2" name="CLOCKINHIBIT" type="input"/>
+        <pin num="3" name="RIPPLEBLANKINGIN" type="input"/>
+        <pin num="4" name="RIPPLEBLANKINGOUT" type="output"/>
+        <pin num="5" name="CARRYOUT" type="output"/>
+        <pin num="6" name="F" type="passive"/>
+        <pin num="7" name="G" type="passive"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="D" type="passive"/>
+        <pin num="10" name="A" type="passive"/>
+        <pin num="11" name="E" type="passive"/>
+        <pin num="12" name="B" type="passive"/>
+        <pin num="13" name="C" type="passive"/>
+        <pin num="14" name="LAMPTEST" type="passive"/>
+        <pin num="15" name="RESET" type="passive"/>
+        <pin num="16" name="VDD" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="SamacSys_Parts" part="TDSR0760">
+      <description>Display Segmented 1DIGIT 8LED Hi-Int Red</description>
+      <docs>https://www.vishay.com/docs/81163/tdsr0750.pdf</docs>
+      <fields>
+        <field name="Reference">DS</field>
+        <field name="Value">TDSR0760</field>
+        <field name="Footprint">TDSR0760</field>
+        <field name="Datasheet">https://www.vishay.com/docs/81163/tdsr0750.pdf</field>
+        <field name="Description">Display Segmented 1DIGIT 8LED Hi-Int Red</field>
+        <field name="Height">7.2</field>
+        <field name="Mouser Part Number">78-TDSR0760</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/TDSR0760?qs=RzxYCzJDjPUsfuITQhx9uw%3D%3D</field>
+        <field name="Manufacturer_Name">Vishay</field>
+        <field name="Manufacturer_Part_Number">TDSR0760</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="A(C)_1" type="passive"/>
+        <pin num="4" name="C" type="passive"/>
+        <pin num="5" name="DP" type="passive"/>
+        <pin num="6" name="B" type="passive"/>
+        <pin num="7" name="A" type="passive"/>
+        <pin num="8" name="A(C)_2" type="passive"/>
+        <pin num="9" name="G" type="passive"/>
+        <pin num="10" name="F" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+12V">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="IC1" pin="16" pinfunction="VDD" pintype="output"/>
+      <node ref="IC2" pin="16" pinfunction="VDD" pintype="output"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="2" name="/A1">
+      <node ref="DS-ONES1" pin="7" pinfunction="A" pintype="passive"/>
+      <node ref="IC2" pin="10" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="3" name="/A2">
+      <node ref="DS-TENS1" pin="7" pinfunction="A" pintype="passive"/>
+      <node ref="IC1" pin="10" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="4" name="/B1">
+      <node ref="DS-ONES1" pin="6" pinfunction="B" pintype="passive"/>
+      <node ref="IC2" pin="12" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="5" name="/B2">
+      <node ref="DS-TENS1" pin="6" pinfunction="B" pintype="passive"/>
+      <node ref="IC1" pin="12" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="6" name="/C1">
+      <node ref="DS-ONES1" pin="4" pinfunction="C" pintype="passive"/>
+      <node ref="IC2" pin="13" pinfunction="C" pintype="passive"/>
+    </net>
+    <net code="7" name="/C2">
+      <node ref="DS-TENS1" pin="4" pinfunction="C" pintype="passive"/>
+      <node ref="IC1" pin="13" pinfunction="C" pintype="passive"/>
+    </net>
+    <net code="8" name="/D1">
+      <node ref="DS-ONES1" pin="2" pinfunction="D" pintype="passive"/>
+      <node ref="IC2" pin="9" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="9" name="/D2">
+      <node ref="DS-TENS1" pin="2" pinfunction="D" pintype="passive"/>
+      <node ref="IC1" pin="9" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="10" name="/E1">
+      <node ref="DS-ONES1" pin="1" pinfunction="E" pintype="passive"/>
+      <node ref="IC2" pin="11" pinfunction="E" pintype="passive"/>
+    </net>
+    <net code="11" name="/E2">
+      <node ref="DS-TENS1" pin="1" pinfunction="E" pintype="passive"/>
+      <node ref="IC1" pin="11" pinfunction="E" pintype="passive"/>
+    </net>
+    <net code="12" name="/F1">
+      <node ref="DS-ONES1" pin="10" pinfunction="F" pintype="passive"/>
+      <node ref="IC2" pin="6" pinfunction="F" pintype="passive"/>
+    </net>
+    <net code="13" name="/F2">
+      <node ref="DS-TENS1" pin="10" pinfunction="F" pintype="passive"/>
+      <node ref="IC1" pin="6" pinfunction="F" pintype="passive"/>
+    </net>
+    <net code="14" name="/G1">
+      <node ref="DS-ONES1" pin="9" pinfunction="G" pintype="passive"/>
+      <node ref="IC2" pin="7" pinfunction="G" pintype="passive"/>
+    </net>
+    <net code="15" name="/G2">
+      <node ref="DS-TENS1" pin="9" pinfunction="G" pintype="passive"/>
+      <node ref="IC1" pin="7" pinfunction="G" pintype="passive"/>
+    </net>
+    <net code="16" name="CARRY_1">
+      <node ref="IC1" pin="1" pinfunction="CLOCK" pintype="input"/>
+      <node ref="IC2" pin="5" pinfunction="CARRYOUT" pintype="output"/>
+    </net>
+    <net code="17" name="CLOCK_BAR">
+      <node ref="IC2" pin="1" pinfunction="CLOCK" pintype="input"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="18" name="GND">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="DS-ONES1" pin="3" pinfunction="A(C)_1" pintype="passive"/>
+      <node ref="DS-ONES1" pin="5" pinfunction="DP" pintype="passive"/>
+      <node ref="DS-ONES1" pin="8" pinfunction="A(C)_2" pintype="passive"/>
+      <node ref="DS-TENS1" pin="3" pinfunction="A(C)_1" pintype="passive"/>
+      <node ref="DS-TENS1" pin="5" pinfunction="DP" pintype="passive"/>
+      <node ref="DS-TENS1" pin="8" pinfunction="A(C)_2" pintype="passive"/>
+      <node ref="IC1" pin="14" pinfunction="LAMPTEST" pintype="passive"/>
+      <node ref="IC1" pin="8" pinfunction="VSS" pintype="power_in"/>
+      <node ref="IC2" pin="14" pinfunction="LAMPTEST" pintype="passive"/>
+      <node ref="IC2" pin="8" pinfunction="VSS" pintype="power_in"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(IC1-CLOCKINHIBIT)">
+      <node ref="IC1" pin="2" pinfunction="CLOCKINHIBIT" pintype="input"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(IC2-CLOCKINHIBIT)">
+      <node ref="IC2" pin="2" pinfunction="CLOCKINHIBIT" pintype="input"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="21" name="RESET">
+      <node ref="IC1" pin="15" pinfunction="RESET" pintype="passive"/>
+      <node ref="IC2" pin="15" pinfunction="RESET" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="unconnected-(IC1-CARRYOUT-Pad5)">
+      <node ref="IC1" pin="5" pinfunction="CARRYOUT" pintype="output+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(IC1-RIPPLEBLANKINGIN-Pad3)">
+      <node ref="IC1" pin="3" pinfunction="RIPPLEBLANKINGIN" pintype="input+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(IC1-RIPPLEBLANKINGOUT-Pad4)">
+      <node ref="IC1" pin="4" pinfunction="RIPPLEBLANKINGOUT" pintype="output+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(IC2-RIPPLEBLANKINGIN-Pad3)">
+      <node ref="IC2" pin="3" pinfunction="RIPPLEBLANKINGIN" pintype="input+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(IC2-RIPPLEBLANKINGOUT-Pad4)">
+      <node ref="IC2" pin="4" pinfunction="RIPPLEBLANKINGOUT" pintype="output+no_connect"/>
+    </net>
+  </nets>
+</export>
