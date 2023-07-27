@@ -1,0 +1,79 @@
+(footprint "16W-Input" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (fp_text reference "REF**" (at -7.6 4.45 unlocked) (layer "F.SilkS") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 16f69522-a293-4b2f-88ea-557adac75772)
+  )
+  (fp_text value "16W-Input" (at -6 6.1 unlocked) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 8e5ce086-5454-40f3-a68b-1ed9199e8879)
+  )
+  (fp_circle (center 0 0) (end 4 0)
+    (stroke (width 0.5) (type default)) (fill none) (layer "B.Mask") (tstamp fdd7ed99-0a9f-4c26-97a7-adf672a2d0fe))
+  (fp_poly
+    (pts
+      (xy -4.32 0.01)
+      (xy -5.5 0.8)
+      (xy -5.5 -0.8)
+    )
+
+    (stroke (width 0) (type solid)) (fill solid) (layer "B.Mask") (tstamp 56a833d4-643b-4c8b-bf2e-c8e75b17e9d6))
+  (fp_poly
+    (pts
+      (xy -0.01 -4.32)
+      (xy -0.8 -5.5)
+      (xy 0.8 -5.5)
+    )
+
+    (stroke (width 0) (type solid)) (fill solid) (layer "B.Mask") (tstamp f9e2f14c-007f-494f-be10-8df631d497c0))
+  (fp_poly
+    (pts
+      (xy 0.01 4.32)
+      (xy 0.8 5.5)
+      (xy -0.8 5.5)
+    )
+
+    (stroke (width 0) (type solid)) (fill solid) (layer "B.Mask") (tstamp 63f20a91-56e1-4c5b-8426-84649b88ca5f))
+  (fp_poly
+    (pts
+      (xy 4.32 -0.01)
+      (xy 5.5 -0.8)
+      (xy 5.5 0.8)
+    )
+
+    (stroke (width 0) (type solid)) (fill solid) (layer "B.Mask") (tstamp a952cfc0-283c-4a3c-9d6a-509d06cf2ba4))
+  (fp_circle (center 0 0) (end 4 0)
+    (stroke (width 0.5) (type default)) (fill none) (layer "F.Mask") (tstamp b92c43f3-dfa4-4310-9eab-0b088448e30d))
+  (fp_poly
+    (pts
+      (xy -4.32 0.01)
+      (xy -5.5 0.8)
+      (xy -5.5 -0.8)
+    )
+
+    (stroke (width 0) (type solid)) (fill solid) (layer "F.Mask") (tstamp 7bf212e9-378d-4735-af28-df95be84dcac))
+  (fp_poly
+    (pts
+      (xy -0.01 -4.32)
+      (xy -0.8 -5.5)
+      (xy 0.8 -5.5)
+    )
+
+    (stroke (width 0) (type solid)) (fill solid) (layer "F.Mask") (tstamp 7df62291-6bd0-4c46-b67b-fd7b3e67d94f))
+  (fp_poly
+    (pts
+      (xy 0.01 4.32)
+      (xy 0.8 5.5)
+      (xy -0.8 5.5)
+    )
+
+    (stroke (width 0) (type solid)) (fill solid) (layer "F.Mask") (tstamp 6176fe41-3212-4a99-8b65-05be8735cf6c))
+  (fp_poly
+    (pts
+      (xy 4.32 -0.01)
+      (xy 5.5 -0.8)
+      (xy 5.5 0.8)
+    )
+
+    (stroke (width 0) (type solid)) (fill solid) (layer "F.Mask") (tstamp 79a32c68-d65a-423f-bee2-ddeb11d7c6da))
+)

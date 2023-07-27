@@ -2,8 +2,8 @@
 <export version="E">
   <design>
     <source>C:\Users\carol\Documents\KiCad\16Bars\16Bars.kicad_sch</source>
-    <date>6/13/2023 11:26:56 AM</date>
-    <tool>Eeschema (6.0.1)</tool>
+    <date>7/27/2023 11:11:17 AM</date>
+    <tool>Eeschema 7.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>16Bars</title>
@@ -31,6 +31,8 @@
       <libsource lib="MCU_Module" part="Arduino_Nano_v3.x" description="Arduino Nano v3.x"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Arduino Nano v3.x"/>
+      <property name="ki_keywords" value="Arduino nano microcontroller module USB"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>dae1ea8a-32da-4426-8f99-becaad375e16</tstamps>
     </comp>
@@ -40,6 +42,8 @@
       <libsource lib="Device" part="C_Polarized_Small_US" description="Polarized capacitor, small US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Polarized capacitor, small US symbol"/>
+      <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>5f506440-0fcc-449f-9242-db683d2fb800</tstamps>
     </comp>
@@ -55,6 +59,8 @@
       <property name="Manufacturer_Part_Number" value="C13533"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>fe000835-e8a4-4679-882e-e70705590baf</tstamps>
     </comp>
@@ -66,6 +72,8 @@
       <property name="Manufacturer_Part_Number" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>d980f589-94db-4e8c-a557-c77cf5289868</tstamps>
     </comp>
@@ -81,6 +89,8 @@
       <property name="Manufacturer_Part_Number" value="C2290"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>c5770ce1-c978-4228-b317-a57d324b9d89</tstamps>
     </comp>
@@ -92,6 +102,8 @@
       <property name="Manufacturer_Part_Number" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>c2ffca7d-ce6e-4692-8456-5ea35f3d4877</tstamps>
     </comp>
@@ -103,6 +115,8 @@
       <property name="Manufacturer_Part_Number" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>7d43e345-44dc-401b-b00a-103bb2aac13a</tstamps>
     </comp>
@@ -119,6 +133,8 @@
       <property name="Manufacturer_Part_Number" value="C191023"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>e7345934-2894-4e7e-a74d-b17dfb2dfe1a</tstamps>
     </comp>
@@ -135,6 +151,8 @@
       <property name="Manufacturer_Part_Number" value="C191023"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>4d3b4f9f-492f-4b30-be0c-f2f16e570b41</tstamps>
     </comp>
@@ -153,6 +171,8 @@
       <property name="Part Number" value="WQP-WQP518MA"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="ki_keywords" value="PJ398SM PJ301SM WQP518MA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>8b13a837-9fd2-4f87-ada6-b3171746bca0</tstamps>
     </comp>
@@ -162,23 +182,27 @@
       <libsource lib="Connector_Generic" part="Conn_02x05_Odd_Even" description="Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>8b5f2542-2061-4472-82ef-d18706021de3</tstamps>
     </comp>
     <comp ref="J3">
-      <value>Conn_01x04</value>
-      <footprint>4ms_Connector:Pins_1x04_2.54mm_TH_SWD</footprint>
+      <value>SevenSegmentHeader</value>
+      <footprint>4ms_Connector:Pins_1x03_2.54mm_TH_AudioInsRGndL</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0401FBV0T</field>
-        <field name="Specifications">HEADER 1x4 MALE PINS 0.100” 180deg</field>
+        <field name="Part Number">1-0301FBV0T</field>
+        <field name="Specifications">HEADER 1x3 MALE PINS 0.100” 180deg</field>
       </fields>
-      <libsource lib="4ms_Connector" part="Conn_01x04" description="HEADER 1x4 MALE PINS 0.100” 180deg"/>
-      <property name="Specifications" value="HEADER 1x4 MALE PINS 0.100” 180deg"/>
+      <libsource lib="4ms_Connector" part="Conn_01x03" description="HEADER 1x3 MALE PINS 0.100” 180deg"/>
+      <property name="Specifications" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0401FBV0T"/>
+      <property name="Part Number" value="1-0301FBV0T"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
+      <property name="ki_keywords" value="Conn_01x03"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>4ca57bf1-8adb-4249-8426-1dd0536a1f91</tstamps>
     </comp>
@@ -197,6 +221,8 @@
       <property name="Part Number" value="WQP-WQP518MA"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="ki_keywords" value="PJ398SM PJ301SM WQP518MA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>085b19f6-c75d-441b-8cba-0d7970201533</tstamps>
     </comp>
@@ -215,6 +241,8 @@
       <property name="Part Number" value="WQP-WQP518MA"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="ki_keywords" value="PJ398SM PJ301SM WQP518MA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>88b489dc-5007-4bf0-b576-79129878f20d</tstamps>
     </comp>
@@ -233,8 +261,29 @@
       <property name="Part Number" value="WQP-WQP518MA"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Audio 3.5mm Jack, mono, switched, PC-pin Vertical"/>
+      <property name="ki_keywords" value="PJ398SM PJ301SM WQP518MA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>e83aaa70-7bb4-4a7a-85ac-1c3758a8f830</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>SevenSegmentGround</value>
+      <footprint>4ms_Connector:Pins_1x03_2.54mm_TH_AudioInsRGndL</footprint>
+      <fields>
+        <field name="Manufacturer">TAD</field>
+        <field name="Part Number">1-0301FBV0T</field>
+        <field name="Specifications">HEADER 1x3 MALE PINS 0.100” 180deg</field>
+      </fields>
+      <libsource lib="4ms_Connector" part="Conn_01x03" description="HEADER 1x3 MALE PINS 0.100” 180deg"/>
+      <property name="Specifications" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
+      <property name="Manufacturer" value="TAD"/>
+      <property name="Part Number" value="1-0301FBV0T"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
+      <property name="ki_keywords" value="Conn_01x03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9ea7cf3-811f-4d45-affd-39be4058ac53</tstamps>
     </comp>
     <comp ref="R1">
       <value>470</value>
@@ -248,6 +297,8 @@
       <property name="Manufacturer_Part_Number" value="C4109"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>1b512e00-f29f-4fe5-bc1c-e76b42eb948f</tstamps>
     </comp>
@@ -263,6 +314,8 @@
       <property name="Manufacturer_Part_Number" value="C4109"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b9c8222a-e057-41d6-b54c-b389ff44d23b</tstamps>
     </comp>
@@ -278,6 +331,8 @@
       <property name="Manufacturer_Part_Number" value="C4109"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>22c57990-6b78-4f18-8ec6-f1540678b43e</tstamps>
     </comp>
@@ -293,6 +348,8 @@
       <property name="Manufacturer_Part_Number" value="C25792"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b7a58442-8471-47d1-8f65-f9b0cc04ffba</tstamps>
     </comp>
@@ -308,6 +365,8 @@
       <property name="Manufacturer_Part_Number" value="C4109"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>dad1d64b-3569-43b9-bb15-49d4a19ce4b4</tstamps>
     </comp>
@@ -323,6 +382,8 @@
       <property name="Manufacturer_Part_Number" value="C4109"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>a25253b3-4f96-4d5c-be19-881867b85c5f</tstamps>
     </comp>
@@ -347,6 +408,7 @@
       <property name="Manufacturer_Part_Number" value="SLB1570"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Slide Switches MINI SLIDE SWITCH"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>bf9c00b9-2547-419a-894c-9a0d673e663e</tstamps>
     </comp>
@@ -357,6 +419,8 @@
       <libsource lib="TDSR*" part="SW_Push_LED_Thonk_Low_Profile" description="Push button switch with LED, generic"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Push button switch with LED, generic"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button LED"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>8b86c1c9-cfb9-49b2-bb41-9ca31170ff9d</tstamps>
     </comp>
@@ -383,34 +447,29 @@
       <property name="Manufacturer_Part_Number" value="EG1249"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Slide Switches SPDT 6MM LEVER"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>41613b88-4d66-4377-a8c7-96e52cc4c696</tstamps>
     </comp>
   </components>
   <libparts>
-    <libpart lib="4ms_Connector" part="Conn_01x04">
-      <description>HEADER 1x4 MALE PINS 0.100” 180deg</description>
+    <libpart lib="4ms_Connector" part="Conn_01x03">
+      <description>HEADER 1x3 MALE PINS 0.100” 180deg</description>
       <footprints>
-        <fp>Connector*:*_??x*mm*</fp>
-        <fp>Connector*:*1x??x*mm*</fp>
-        <fp>Pin?Header?Straight?1X*</fp>
-        <fp>Pin?Header?Angled?1X*</fp>
-        <fp>Socket?Strip?Straight?1X*</fp>
-        <fp>Socket?Strip?Angled?1X*</fp>
+        <fp>Connector*:*_1x??_*</fp>
       </footprints>
       <fields>
         <field name="Reference">J</field>
-        <field name="Value">Conn_01x04</field>
-        <field name="Footprint">4ms_Connector:Pins_1x04_2.54mm_TH_SWD</field>
-        <field name="Specifications">HEADER 1x4 MALE PINS 0.100” 180deg</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Footprint">4ms_Connector:Pins_1x03_2.54mm_TH_AudioInsRGndL</field>
+        <field name="Specifications">HEADER 1x3 MALE PINS 0.100” 180deg</field>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0401FBV0T</field>
+        <field name="Part Number">1-0301FBV0T</field>
       </fields>
       <pins>
         <pin num="1" name="Pin_1" type="passive"/>
         <pin num="2" name="Pin_2" type="passive"/>
         <pin num="3" name="Pin_3" type="passive"/>
-        <pin num="4" name="Pin_4" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="4ms_Jack" part="3.5mm_Mono_Switched">
@@ -650,26 +709,17 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="4ms_Connector">
-      <uri>C:\Users\carol\Documents\KiCad\6.0\3rdparty/symbols/com_github_4ms_4ms-kicad-lib/4ms_Connector.kicad_sym</uri>
-    </library>
-    <library logical="4ms_Jack">
-      <uri>C:\Users\carol\Documents\KiCad\6.0\3rdparty/symbols/com_github_4ms_4ms-kicad-lib/4ms_Jack.kicad_sym</uri>
-    </library>
     <library logical="Connector_Generic">
-      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
     </library>
     <library logical="Device">
-      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
     </library>
     <library logical="MCU_Module">
-      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/MCU_Module.kicad_sym</uri>
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/MCU_Module.kicad_sym</uri>
     </library>
     <library logical="SLB1570">
       <uri>C:\Users\carol\Documents\KiCad\16Bars/Parts/SLB1570.lib</uri>
-    </library>
-    <library logical="SamacSys_Parts">
-      <uri>C:\Users\carol\Documents\KiCad\6.0\3rdparty/SamacSys_Parts.kicad_sym</uri>
     </library>
     <library logical="TDSR*">
       <uri>C:\Users\carol\Documents\KiCad\16Bars/Parts/symbols/TDSR0760/2023-01-04_21-55-18.kicad_sym</uri>
@@ -716,7 +766,7 @@
       <node ref="S1" pin="5" pinfunction="5" pintype="passive"/>
     </net>
     <net code="9" name="/barsPerPhrase">
-      <node ref="A1" pin="9" pinfunction="D6" pintype="bidirectional"/>
+      <node ref="A1" pin="23" pinfunction="A4" pintype="bidirectional"/>
       <node ref="SW3" pin="2" pinfunction="COM" pintype="passive"/>
     </net>
     <net code="10" name="/firstBar">
@@ -769,13 +819,15 @@
       <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="J2" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="J2" pin="8" pinfunction="Pin_8" pintype="passive"/>
-      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J4" pin="2" pinfunction="SHEILD" pintype="passive"/>
       <node ref="J4" pin="3" pinfunction="SW" pintype="passive"/>
       <node ref="J5" pin="2" pinfunction="SHEILD" pintype="passive"/>
       <node ref="J5" pin="3" pinfunction="SW" pintype="passive"/>
       <node ref="J6" pin="2" pinfunction="SHEILD" pintype="passive"/>
       <node ref="J6" pin="3" pinfunction="SW" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J7" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J7" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="R12" pin="1" pintype="passive"/>
       <node ref="R15" pin="1" pintype="passive"/>
@@ -786,23 +838,23 @@
       <node ref="SW3" pin="4" pinfunction="4" pintype="passive"/>
       <node ref="SW3" pin="5" pinfunction="5" pintype="passive"/>
     </net>
-    <net code="19" name="Net-(D1-Pad1)">
+    <net code="19" name="Net-(D1-K)">
       <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
     </net>
-    <net code="20" name="Net-(D2-Pad1)">
+    <net code="20" name="Net-(D2-K)">
       <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R12" pin="2" pintype="passive"/>
     </net>
-    <net code="21" name="Net-(D3-Pad1)">
+    <net code="21" name="Net-(D3-K)">
       <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
     </net>
-    <net code="22" name="Net-(D4-Pad1)">
+    <net code="22" name="Net-(D4-K)">
       <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
     </net>
-    <net code="23" name="Net-(J1-Pad1)">
+    <net code="23" name="Net-(J1-SIG)">
       <node ref="J1" pin="1" pinfunction="SIG" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
     </net>
@@ -812,42 +864,42 @@
     </net>
     <net code="25" name="RESET">
       <node ref="A1" pin="8" pinfunction="D5" pintype="bidirectional"/>
-      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
     </net>
-    <net code="26" name="unconnected-(A1-Pad1)">
-      <node ref="A1" pin="1" pinfunction="D1/TX" pintype="bidirectional+no_connect"/>
-    </net>
-    <net code="27" name="unconnected-(A1-Pad2)">
-      <node ref="A1" pin="2" pinfunction="D0/RX" pintype="bidirectional+no_connect"/>
-    </net>
-    <net code="28" name="unconnected-(A1-Pad3)">
-      <node ref="A1" pin="3" pinfunction="~{RESET}" pintype="input+no_connect"/>
-    </net>
-    <net code="29" name="unconnected-(A1-Pad17)">
+    <net code="26" name="unconnected-(A1-3V3-Pad17)">
       <node ref="A1" pin="17" pinfunction="3V3" pintype="power_out+no_connect"/>
     </net>
-    <net code="30" name="unconnected-(A1-Pad18)">
-      <node ref="A1" pin="18" pinfunction="AREF" pintype="input+no_connect"/>
-    </net>
-    <net code="31" name="unconnected-(A1-Pad23)">
-      <node ref="A1" pin="23" pinfunction="A4" pintype="bidirectional+no_connect"/>
-    </net>
-    <net code="32" name="unconnected-(A1-Pad24)">
+    <net code="27" name="unconnected-(A1-A5-Pad24)">
       <node ref="A1" pin="24" pinfunction="A5" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="33" name="unconnected-(A1-Pad25)">
+    <net code="28" name="unconnected-(A1-A6-Pad25)">
       <node ref="A1" pin="25" pinfunction="A6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="34" name="unconnected-(A1-Pad26)">
+    <net code="29" name="unconnected-(A1-A7-Pad26)">
       <node ref="A1" pin="26" pinfunction="A7" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="35" name="unconnected-(A1-Pad28)">
+    <net code="30" name="unconnected-(A1-AREF-Pad18)">
+      <node ref="A1" pin="18" pinfunction="AREF" pintype="input+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(A1-D0{slash}RX-Pad2)">
+      <node ref="A1" pin="2" pinfunction="D0/RX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(A1-D1{slash}TX-Pad1)">
+      <node ref="A1" pin="1" pinfunction="D1/TX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(A1-D6-Pad9)">
+      <node ref="A1" pin="9" pinfunction="D6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(A1-~{RESET}-Pad3)">
+      <node ref="A1" pin="3" pinfunction="~{RESET}" pintype="input+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(A1-~{RESET}-Pad28)">
       <node ref="A1" pin="28" pinfunction="~{RESET}" pintype="input+no_connect"/>
     </net>
-    <net code="36" name="unconnected-(J2-Pad9)">
+    <net code="36" name="unconnected-(J2-Pin_9-Pad9)">
       <node ref="J2" pin="9" pinfunction="Pin_9" pintype="passive+no_connect"/>
     </net>
-    <net code="37" name="unconnected-(J2-Pad10)">
+    <net code="37" name="unconnected-(J2-Pin_10-Pad10)">
       <node ref="J2" pin="10" pinfunction="Pin_10" pintype="passive+no_connect"/>
     </net>
     <net code="38" name="unconnected-(SW1-Pad2)">

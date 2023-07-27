@@ -1,7 +1,0 @@
-Comment,Designator,Footprint,LCSC Part Number
-"330pf Unpolarized capacitor, small symbol","C11, ",Capacitor_SMD:C_0402_1005Metric,C13533
-LED Light emitting diode,"D2, ",LED_SMD:LED_0603_1608Metric,C2290
-1N5819WS Diode,"D5, D6, ",Diode_SMD:D_SOD-323,C191023
-470 Resistor,"R1, R2, R3, R5, ",Resistor_SMD:R_0402_1005Metric,C25117
-10K Resistor,"R12, ",Resistor_SMD:R_0402_1005Metric,C4109
-2K Resistor,"R15, ",Resistor_SMD:R_0402_1005Metric,C4109

@@ -57,13 +57,7 @@
         }
       ],
       "drc_exclusions": [
-        "silk_over_copper|61970000|48417200|7692a7f3-9e24-4b8d-b6ef-bbea8d38680b|25f51cc4-e3ee-42f4-8ff5-b230e9e63a8a",
-        "silk_over_copper|62000000|62717200|3190d765-177a-41df-bc9c-62fd53a7998c|bd25c3b4-44d5-4372-b47e-195b0447a943",
-        "silk_over_copper|62000000|76394700|8a802448-4498-420b-bba1-e77200916b9f|296064a0-5ac3-4d1e-9502-b8f896f62a47",
-        "silk_over_copper|62000000|90072200|c75ca38c-90f4-4a75-93c1-e3b7259a5e5a|f9ee3c4c-3637-4ba7-9141-0ee72b381939",
-        "silk_over_copper|62250000|132900000|c329e109-c898-4c4c-a4cc-f3eb62c3f76a|a0a6bee1-e74f-48b3-b68d-5a5fd64d4f4c",
-        "silk_over_copper|63120000|132900000|c329e109-c898-4c4c-a4cc-f3eb62c3f76a|a0a6bee1-e74f-48b3-b68d-5a5fd64d4f4c",
-        "silk_over_copper|78360000|132900000|c329e109-c898-4c4c-a4cc-f3eb62c3f76a|a6b3c6d7-a932-4806-a6c6-aa12a6cc7894"
+        "starved_thermal|78360000|104870000|dd354b48-7841-46b2-8318-039cf580bf53|4ef2643d-56dc-4ddb-bb84-d025c566aff4|B.Cu"
       ],
       "meta": {
         "version": 2
@@ -379,18 +373,23 @@
     "rule_severities": {
       "bus_definition_conflict": "error",
       "bus_entry_needed": "error",
-      "bus_label_syntax": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
+      "conflicting_netclasses": "error",
       "different_unit_footprint": "error",
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
       "extra_units": "error",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
       "lib_symbol_issues": "warning",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
       "multiple_net_names": "warning",
       "net_not_bus_member": "warning",
       "no_connect_connected": "warning",
@@ -400,6 +399,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
+      "simulation_model_issue": "ignore",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -455,6 +455,8 @@
   "schematic": {
     "annotate_start_num": 0,
     "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
@@ -486,7 +488,11 @@
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_adjust_passive_values": false,
+    "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
