@@ -5,19 +5,18 @@ const byte clockPinNum = 2;
 const byte resetButtonPinNum = 3;
 const byte clockBarPinNum = 4;
 const byte resetOutPinNum = 5;
-// FIXME Pin 6 is not reading correctly, need to jumper PCB from D6 to A4
-// const byte barsPerPhrasePinNum = 6;
 const byte barsPerPhrasePinNum = A4;
 const byte beatsPerBarPins[5] = {7, 8, 9, 10, 11};
-// FIXME PCB layout put LEDs in the wrong spots, swapping pins to fix it.
 const byte firstBarOutPin = 12;
 const byte middleBarOutPin = 13;
 const byte firstBarLEDPin = A1;
-// const byte middleBarLEDPin = A2;
-const byte middleBarLEDPin = A3;
+// FIXME PCB layout put LEDs in the wrong spots, swapping pins to fix it.
+const byte middleBarLEDPin = A2;
+// const byte middleBarLEDPin = A3;
 const byte lastBarOutPin = A0;
-const byte lastBarLEDPin = A2;
-// const byte lastBarLEDPin = A3;
+// const byte lastBarLEDPin = A2;
+const byte lastBarLEDPin = A3;
+const byte ledPins[3] = {firstBarLEDPin, middleBarLEDPin, lastBarLEDPin};
 
 const byte beatsPerBarValues[5] = {4, 7, 8, 12, 16};
 const byte barsPerPhraseValues[2] = {8,16}; 
@@ -57,6 +56,39 @@ void setup(){
   pinMode(lastBarOutPin, OUTPUT);
   pinMode(lastBarLEDPin, OUTPUT);
   Serial.begin(9600);
+  flashLedStartup();
+}
+
+void flashLedStartup(){
+  resetOutPin.write(HIGH);
+  delay(10);
+  resetOutPin.write(LOW);
+  for (int i = 0; i < 15; i++)
+  {
+    clockBarPin.write(HIGH);
+    delay(50);
+    clockBarPin.write(LOW);
+    delay(50);
+  }
+
+  resetOutPin.write(HIGH);
+  delay(10);
+  resetOutPin.write(LOW);
+
+ for (int i = 0; i < 3; i++)
+  {
+    digitalWrite(ledPins[i], HIGH);
+    delay(50);
+    digitalWrite(ledPins[i], LOW);
+    delay(50);
+  }
+ for (int i = 2; i >= 0; i--)
+  {
+    digitalWrite(ledPins[i], HIGH);
+    delay(50);
+    digitalWrite(ledPins[i], LOW);
+    delay(50);
+  }
 }
 
 void loop(){
