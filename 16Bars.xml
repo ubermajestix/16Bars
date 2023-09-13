@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>C:\Users\carol\Documents\KiCad\16Bars\16Bars.kicad_sch</source>
-    <date>7/27/2023 11:11:17 AM</date>
+    <source>C:\Users\Tyler\Documents\GitHub\16Bars\16Bars.kicad_sch</source>
+    <date>9/13/2023 1:05:45 PM</date>
     <tool>Eeschema 7.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -371,14 +371,14 @@
       <tstamps>dad1d64b-3569-43b9-bb15-49d4a19ce4b4</tstamps>
     </comp>
     <comp ref="R15">
-      <value>2K</value>
+      <value>1K</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <fields>
-        <field name="LCSC">C4109</field>
+        <field name="LCSC">C4410</field>
         <field name="Manufacturer_Part_Number">C4109</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="LCSC" value="C4109"/>
+      <property name="LCSC" value="C4410"/>
       <property name="Manufacturer_Part_Number" value="C4109"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="16Bars.kicad_sch"/>
@@ -450,6 +450,18 @@
       <property name="ki_description" value="Slide Switches SPDT 6MM LEVER"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>41613b88-4d66-4377-a8c7-96e52cc4c696</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>LM7805_TO220</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</datasheet>
+      <libsource lib="Regulator_Linear" part="LM7805_TO220" description="Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"/>
+      <property name="ki_keywords" value="Voltage Regulator 1A Positive"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f3d5918e-1eb3-4ada-8d35-dd8e999f47fa</tstamps>
     </comp>
   </components>
   <libparts>
@@ -642,6 +654,24 @@
         <pin num="30" name="VIN" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Regulator_Linear" part="LM7805_TO220">
+      <description>Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220</description>
+      <docs>https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7805_TO220</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
     <libpart lib="SLB1570" part="SLB1570">
       <description>Slide Switches MINI SLIDE SWITCH</description>
       <docs>https://componentsearchengine.com/Datasheets/1/SLB1570.pdf</docs>
@@ -709,6 +739,12 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="4ms_Connector">
+      <uri>C:\Users\Tyler\Documents\GitHub\16Bars/Parts/4ms-kicad-lib/symbols/4ms_Connector.kicad_sym</uri>
+    </library>
+    <library logical="4ms_Jack">
+      <uri>C:\Users\Tyler\Documents\GitHub\16Bars/Parts/4ms-kicad-lib/symbols/4ms_Jack.kicad_sym</uri>
+    </library>
     <library logical="Connector_Generic">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
     </library>
@@ -718,28 +754,32 @@
     <library logical="MCU_Module">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/MCU_Module.kicad_sym</uri>
     </library>
+    <library logical="Regulator_Linear">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
+    </library>
     <library logical="SLB1570">
-      <uri>C:\Users\carol\Documents\KiCad\16Bars/Parts/SLB1570.lib</uri>
+      <uri>C:\Users\Tyler\Documents\GitHub\16Bars/Parts/SLB1570.lib</uri>
     </library>
     <library logical="TDSR*">
-      <uri>C:\Users\carol\Documents\KiCad\16Bars/Parts/symbols/TDSR0760/2023-01-04_21-55-18.kicad_sym</uri>
+      <uri>C:\Users\Tyler\Documents\GitHub\16Bars/Parts/symbols/TDSR0760/2023-01-04_21-55-18.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
     <net code="1" name="+5V">
-      <node ref="A1" pin="27" pinfunction="+5V" pintype="power_out"/>
+      <node ref="A1" pin="30" pinfunction="VIN" pintype="power_in"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="S1" pin="C1" pinfunction="COM_1" pintype="passive"/>
       <node ref="S1" pin="C2" pinfunction="COM_2" pintype="passive"/>
       <node ref="SW3" pin="1" pinfunction="N.C." pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="VO" pintype="power_out"/>
     </net>
     <net code="2" name="+12V">
-      <node ref="A1" pin="30" pinfunction="VIN" pintype="power_in"/>
       <node ref="C1" pin="1" pintype="passive"/>
-      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="VI" pintype="power_in"/>
     </net>
     <net code="3" name="/ResetButton">
       <node ref="A1" pin="6" pinfunction="D3" pintype="bidirectional"/>
@@ -837,6 +877,7 @@
       <node ref="SW3" pin="3" pinfunction="N.O." pintype="passive"/>
       <node ref="SW3" pin="4" pinfunction="4" pintype="passive"/>
       <node ref="SW3" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
     </net>
     <net code="19" name="Net-(D1-K)">
       <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
@@ -866,46 +907,49 @@
       <node ref="A1" pin="8" pinfunction="D5" pintype="bidirectional"/>
       <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
     </net>
-    <net code="26" name="unconnected-(A1-3V3-Pad17)">
+    <net code="26" name="unconnected-(A1-+5V-Pad27)">
+      <node ref="A1" pin="27" pinfunction="+5V" pintype="power_out+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(A1-3V3-Pad17)">
       <node ref="A1" pin="17" pinfunction="3V3" pintype="power_out+no_connect"/>
     </net>
-    <net code="27" name="unconnected-(A1-A5-Pad24)">
+    <net code="28" name="unconnected-(A1-A5-Pad24)">
       <node ref="A1" pin="24" pinfunction="A5" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="28" name="unconnected-(A1-A6-Pad25)">
+    <net code="29" name="unconnected-(A1-A6-Pad25)">
       <node ref="A1" pin="25" pinfunction="A6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="29" name="unconnected-(A1-A7-Pad26)">
+    <net code="30" name="unconnected-(A1-A7-Pad26)">
       <node ref="A1" pin="26" pinfunction="A7" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="30" name="unconnected-(A1-AREF-Pad18)">
+    <net code="31" name="unconnected-(A1-AREF-Pad18)">
       <node ref="A1" pin="18" pinfunction="AREF" pintype="input+no_connect"/>
     </net>
-    <net code="31" name="unconnected-(A1-D0{slash}RX-Pad2)">
+    <net code="32" name="unconnected-(A1-D0{slash}RX-Pad2)">
       <node ref="A1" pin="2" pinfunction="D0/RX" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="32" name="unconnected-(A1-D1{slash}TX-Pad1)">
+    <net code="33" name="unconnected-(A1-D1{slash}TX-Pad1)">
       <node ref="A1" pin="1" pinfunction="D1/TX" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="33" name="unconnected-(A1-D6-Pad9)">
+    <net code="34" name="unconnected-(A1-D6-Pad9)">
       <node ref="A1" pin="9" pinfunction="D6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="34" name="unconnected-(A1-~{RESET}-Pad3)">
+    <net code="35" name="unconnected-(A1-~{RESET}-Pad3)">
       <node ref="A1" pin="3" pinfunction="~{RESET}" pintype="input+no_connect"/>
     </net>
-    <net code="35" name="unconnected-(A1-~{RESET}-Pad28)">
+    <net code="36" name="unconnected-(A1-~{RESET}-Pad28)">
       <node ref="A1" pin="28" pinfunction="~{RESET}" pintype="input+no_connect"/>
     </net>
-    <net code="36" name="unconnected-(J2-Pin_9-Pad9)">
+    <net code="37" name="unconnected-(J2-Pin_9-Pad9)">
       <node ref="J2" pin="9" pinfunction="Pin_9" pintype="passive+no_connect"/>
     </net>
-    <net code="37" name="unconnected-(J2-Pin_10-Pad10)">
+    <net code="38" name="unconnected-(J2-Pin_10-Pad10)">
       <node ref="J2" pin="10" pinfunction="Pin_10" pintype="passive+no_connect"/>
     </net>
-    <net code="38" name="unconnected-(SW1-Pad2)">
+    <net code="39" name="unconnected-(SW1-Pad2)">
       <node ref="SW1" pin="2" pinfunction="2" pintype="passive+no_connect"/>
     </net>
-    <net code="39" name="unconnected-(SW1-Pad3)">
+    <net code="40" name="unconnected-(SW1-Pad3)">
       <node ref="SW1" pin="3" pinfunction="3" pintype="passive+no_connect"/>
     </net>
   </nets>
