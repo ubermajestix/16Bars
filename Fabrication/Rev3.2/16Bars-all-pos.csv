@@ -1,0 +1,11 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C11,330pf,C_0402_1005Metric,69.9,-46,0,top
+D5,1N5819WS,D_SOD-323,67.9,-44.9,90,top
+D6,1N5819WS,D_SOD-323,67.9,-41.4,-90,top
+D2,LED,LED_0603_1608Metric,69.8,-39,-90,top
+R1,470,R_0402_1005Metric,68,-53.5,0,top
+R2,470,R_0402_1005Metric,68.1,-67.1,0,top
+R3,470,R_0402_1005Metric,67.9,-80.8,0,top
+R5,470,R_0402_1005Metric,67.9,-39.1,180,top
+R12,10K,R_0402_1005Metric,67.9,-38,180,top
+R15,1K,R_0402_1005Metric,76.4,-51.2,90,top
