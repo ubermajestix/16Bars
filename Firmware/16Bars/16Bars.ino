@@ -136,7 +136,13 @@ void loop(){
       digitalWrite(lastBarOutPin, lastBar);
       digitalWrite(lastBarLEDPin, lastBar);
       changeBeatsAndBars();
+      // Reset 4033 to "00"
       resetOutPin.write(HIGH);
+      resetOutPin.write(LOW);
+      // Increment 4033's to "01"
+      clockBarPin.write(LOW); 
+      clockBarPin.write(HIGH);
+      clockBarPin.write(LOW);
       resetButtonPressed = 1;
     }
   }
