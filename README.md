@@ -12,6 +12,7 @@ This is my first module design and I've made several simplifying design choices:
 2. Reset jack would be nice to play better with midi or modules that output reset
 3. Midi support? Accept MIDI TRS input for start, stop, and reset?
 4. LFO output with LFO reset, could use 1st bar, n/2 bars, and last bar to self patch musical phrased LFO
+## Rev 3.2 Updates and Issues
 
 ## Rev 2.0 Updates and Issues
 I was successfully able to get JLCPCB to manufacture and place a lot of SMD components as I don't have the time or gear to get into surface mount, win! 
