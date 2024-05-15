@@ -1,6 +1,11 @@
 #include "src/debug.h"
 #include "src/UberPin/UberPin.h"
 
+// TIP: for knockoff Arduino Nanos you may need a CH340 driver from Jan 2019 or
+// earlier to upload this sketch or communicate with the board via USB.
+// The CH340 driver can be found at Sparkfun: 
+// https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all
+
 const byte clockPinNum = 2;
 const byte resetButtonPinNum = 3;
 const byte clockBarPinNum = 4;
@@ -22,7 +27,10 @@ const byte beatsPerBarValues[5] = {4, 7, 8, 12, 16};
 const byte barsPerPhraseValues[2] = {8,16}; 
 
 // TESTING Internal clock settings
-const byte internalClock = 0; // Testing mode active when 1
+// Enter this mode if reset button pressed for 1 second within 10 seconds of startup
+volatile byte enterInternalClockMode = 1; // If reset button pressed on startup enter test mode
+volatile unsigned long enterInternalClockModeTime = 0;
+volatile byte internalClock = 0; // Testing mode active when 1
 const byte internalBPM = 500; // 120 bpm 1/4 note is 500ms
 volatile unsigned long lastInternalClockTime = 0;
 
@@ -64,6 +72,7 @@ void setup(){
   Serial.begin(9600);
   flashLedStartup();
   changeBeatsAndBars();
+
 }
 
 void flashLedStartup(){
@@ -77,7 +86,7 @@ void flashLedStartup(){
     clockBarPin.write(HIGH);
     delay(50);
     if(i == 15){
-      delay(950);
+      delay(650);
     }
     clockBarPin.write(LOW);
     delay(50);
@@ -108,19 +117,46 @@ void flashLEDs(){
     digitalWrite(ledPins[i], HIGH);
     delay(50);
     digitalWrite(ledPins[i], LOW);
-    delay(50);
   }
+}
+void flashLEDSync(){
+  digitalWrite(ledPins[0], LOW);
+  digitalWrite(ledPins[1], LOW);
+  digitalWrite(ledPins[2], LOW); 
+  digitalWrite(ledPins[0], HIGH);
+  digitalWrite(ledPins[1], HIGH);
+  digitalWrite(ledPins[2], HIGH);
+  delay(150);
+  digitalWrite(ledPins[0], LOW);
+  digitalWrite(ledPins[1], LOW);
+  digitalWrite(ledPins[2], LOW); 
 }
 
 void loop(){
+
+  
   if (resetButtonPin.changed()){
     if (resetButtonPin.direction == 1){
       debugln("---resetRelease---");
       resetOutPin.write(LOW);
       resetButtonPressed = 0;
+      // Enter internal clock mode if reset button pressed and held for 1 second within 10 seconds of startup
+      if(enterInternalClockMode == 0 && millis() <= 10000 &&  millis() - enterInternalClockModeTime >= 1000){
+        debugln("reset long press");
+         for (int i = 0; i < 3; i++){flashLEDSync(); delay(150);}
+        internalClock = 1;
+      }
     }
     else {
       debugln("----resetbutton---");
+    
+      // If reset button is long pressed during first loop when powering up, enter test mode.
+      if(enterInternalClockMode == 1 && resetButtonPin.direction == 0){
+        debug(millis()); debugln(" reset pressed at startup");
+        enterInternalClockModeTime = millis();
+      }
+      enterInternalClockMode = 0;
+
       // When reset button is pressed we reset the counters, 
       // check if we need to change beats or bars and output a 
       // high reset signal to the CD4033 counters to reset the seven segment leds
@@ -136,7 +172,7 @@ void loop(){
       digitalWrite(lastBarOutPin, lastBar);
       digitalWrite(lastBarLEDPin, lastBar);
       changeBeatsAndBars();
-      // Reset 4033 to "00"
+      // Reset 4033's to "00"
       resetOutPin.write(HIGH);
       resetOutPin.write(LOW);
       // Increment 4033's to "01"

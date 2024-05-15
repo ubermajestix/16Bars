@@ -1,7 +1,4 @@
 {
-    "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
-    "programmer": "avrisp",
-    "port": "COM3",
-    "sketch": "Firmware\\16Bars\\16Bars.ino"
+    "port": "COM3"
 }
