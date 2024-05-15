@@ -21,6 +21,11 @@ const byte ledPins[3] = {firstBarLEDPin, middleBarLEDPin, lastBarLEDPin};
 const byte beatsPerBarValues[5] = {4, 7, 8, 12, 16};
 const byte barsPerPhraseValues[2] = {8,16}; 
 
+// TESTING Internal clock settings
+const byte internalClock = 0; // Testing mode active when 1
+const byte internalBPM = 500; // 120 bpm 1/4 note is 500ms
+volatile unsigned long lastInternalClockTime = 0;
+
 UberPin clockPin(clockPinNum);
 UberPin resetButtonPin(resetButtonPinNum, 5);
 UberPin clockBarPin(clockBarPinNum);
@@ -28,6 +33,7 @@ UberPin resetOutPin(resetOutPinNum);
 
 volatile byte beatCounter = 0; // Counter for the clock pulses
 volatile byte barCounter = 0;  // Counter for bars
+// Set default values for barPerPhrase and beatsPerBar but in setup() we'll select values off the slider inputs.
 volatile byte barsPerPhrase = barsPerPhraseValues[1]; // Default is 16 bars because, uh, that's the name of the project.
 volatile byte beatsPerBar= beatsPerBarValues[0]; // Default is 4. Can be set to 4, 7, 8, 12, 16 with switch 
 volatile byte resetButtonPressed = 0;
@@ -57,30 +63,45 @@ void setup(){
   pinMode(lastBarLEDPin, OUTPUT);
   Serial.begin(9600);
   flashLedStartup();
+  changeBeatsAndBars();
 }
 
 void flashLedStartup(){
   resetOutPin.write(HIGH);
   delay(10);
   resetOutPin.write(LOW);
-  for (int i = 0; i < 15; i++)
+
+  // Count from 0 to 16 then pause on 16 for 1 second
+  for (int i = 0; i < 16; i++)
   {
     clockBarPin.write(HIGH);
     delay(50);
+    if(i == 15){
+      delay(950);
+    }
     clockBarPin.write(LOW);
     delay(50);
   }
 
+  // Set Counter to "01" instead of "00" on startup before LEDs flash
   resetOutPin.write(HIGH);
-  delay(10);
   resetOutPin.write(LOW);
+  clockBarPin.write(HIGH); 
+  clockBarPin.write(LOW);
 
+  // Flash the leds three times
+  for (int i = 0; i < 3; i++)
+  {
+    flashLEDs();
+  }
+}
+
+void flashLEDs(){
  for (int i = 0; i < 3; i++)
   {
     digitalWrite(ledPins[i], HIGH);
     delay(50);
     digitalWrite(ledPins[i], LOW);
-    delay(50);
   }
  for (int i = 2; i >= 0; i--)
   {
@@ -92,7 +113,6 @@ void flashLedStartup(){
 }
 
 void loop(){
-  // TODO can we get the counters to count from 1 to 16 instead of 0 to 15? If barCounter == 0 send fast trigger to get leds to display 01 before next clock pulse?
   if (resetButtonPin.changed()){
     if (resetButtonPin.direction == 1){
       debugln("---resetRelease---");
@@ -120,12 +140,28 @@ void loop(){
       resetButtonPressed = 1;
     }
   }
-  if (clockPin.changed() && clockPin.direction == 1){ 
-    // if there's a clock and the resetbutton (pullup) is not pressed increment counter
-    if (!resetButtonPressed){
-      incrementCounters();
+  // TESTING MODE: if internal clock is active don't read incoming clock 
+  // and increment the counter based on internalBPM
+  if (internalClock == 1){
+    unsigned long internalClockTime = millis();
+    if(internalClockTime - lastInternalClockTime > internalBPM){
+      debugln("----internal clock ---");
+      lastInternalClockTime = internalClockTime;
+      if (!resetButtonPressed){
+        incrementCounters();
+      }
     }
   }
+  // External clock input mode
+  else{
+    if (clockPin.changed() && clockPin.direction == 1){ 
+      // if there's a clock and the resetbutton (pullup) is not pressed increment counter
+      if (!resetButtonPressed){
+        incrementCounters();
+      }
+    }
+  }
+
 }
 // This function will be called whenever a rising edge is detected from the clock
 void incrementCounters(){
@@ -134,7 +170,14 @@ void incrementCounters(){
     firstBar = HIGH;
   }
   clockBarPin.write(clockBarState);
-  resetOutPin.write(resetPhrase);
+  resetOutPin.write(resetPhrase); // sends reset to 4033
+  // Incement 4033 counters to show "01" to count from 1 to barsPerPhrase instead of 0 to (barsPerPhrase - 1)
+  if(resetPhrase == HIGH){
+    resetOutPin.write(LOW);
+    clockBarPin.write(LOW); 
+    clockBarPin.write(HIGH);
+    clockBarPin.write(LOW);
+  }
   digitalWrite(firstBarOutPin, firstBar);
   digitalWrite(firstBarLEDPin, firstBar);
   digitalWrite(middleBarOutPin, middleBar);
@@ -200,7 +243,7 @@ void changeBeatsAndBars(){
   // Read phrase length, if HIGH set to 16 bars, if LOW set to 8 bars
   barsPerPhrase = digitalRead(barsPerPhrasePinNum) ? barsPerPhraseValues[1] : barsPerPhraseValues[0];
   debug("bars "); debug(barsPerPhrasePinNum); debug(" "); debug(digitalRead(barsPerPhrasePinNum)); debug(" "); debugln(barsPerPhrase);
-  // REead 5 position switch to set beatsPerBar, 
+  // Read 5 position switch to set beatsPerBar, 
   // each switch position is connected to it's own input pullup
   for (int i = 0; i < 5; i++) {
     int switchState = digitalRead(beatsPerBarPins[i]);
