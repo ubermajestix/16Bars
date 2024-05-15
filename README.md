@@ -3,19 +3,15 @@
 
 ![16barsPCB](https://user-images.githubusercontent.com/12533/156662021-8fc3b2a8-bc3f-4ee7-a015-541e6d8de693.png)
 
-16Bars is a utility module designed to display how many 8-beat 
-measures have elapsed on a seven segment display given a quarter note clock pulse. 
-The module resets every 16 measures (bars) or when the reset button is pressed.
+16Bars is a utility module designed to display how many 
+measures have elapsed on a seven segment display given a clock pulse. 
+The module resets every 8 or 16 measures (bars) or when the reset button is pressed.
 
 This is my first module design and I've made several simplifying design choices:
-1. Only takes quarter note pulses
-2. ~Only counts 8-beats/measure~ Rev 2 can run in 4/4 or 8/4 mode
-3. Only uses IC's, no microcontroller.
-4. Only 1 PCB in 3U format. 1U would require a stacking PCBs
-5. Only a reset button, no reset jack.
-
-Obviously this list is a roadmap for future improvements. ~I'd like the clock input and beats/measure settings to be configurable 
-with jumpers or switches~ Done! A 1U version would be much more convienient, reset jack would be nice, etc. 
+1. A 1U version would be much more convienient
+2. Reset jack would be nice to play better with midi or modules that output reset
+3. Midi support? Accept MIDI TRS input for start, stop, and reset?
+4. LFO output with LFO reset, could use 1st bar, n/2 bars, and last bar to self patch musical phrased LFO
 
 ## Rev 2.0 Updates and Issues
 I was successfully able to get JLCPCB to manufacture and place a lot of SMD components as I don't have the time or gear to get into surface mount, win! 
