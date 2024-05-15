@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>C:\Users\Tyler\Documents\GitHub\16Bars\16Bars.kicad_sch</source>
-    <date>9/13/2023 1:05:45 PM</date>
+    <source>C:\Users\carol\Documents\GitHub\16Bars\16Bars.kicad_sch</source>
+    <date>9/15/2023 11:14:46 AM</date>
     <tool>Eeschema 7.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -155,6 +155,60 @@
       <property name="ki_keywords" value="diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>4d3b4f9f-492f-4b30-be0c-f2f16e570b41</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>1N5819WS</value>
+      <footprint>Diode_SMD:D_SOD-323</footprint>
+      <datasheet>https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf</datasheet>
+      <fields>
+        <field name="LCSC">C191023</field>
+        <field name="Manufacturer_Part_Number">C191023</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="LCSC" value="C191023"/>
+      <property name="Manufacturer_Part_Number" value="C191023"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>93cc759f-1eaa-49fe-9f35-d6969328e530</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>1N5819WS</value>
+      <footprint>Diode_SMD:D_SOD-323</footprint>
+      <datasheet>https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf</datasheet>
+      <fields>
+        <field name="LCSC">C191023</field>
+        <field name="Manufacturer_Part_Number">C191023</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="LCSC" value="C191023"/>
+      <property name="Manufacturer_Part_Number" value="C191023"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b6209315-254c-4e5c-9389-d340fc222bb1</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>1N5819WS</value>
+      <footprint>Diode_SMD:D_SOD-323</footprint>
+      <datasheet>https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf</datasheet>
+      <fields>
+        <field name="LCSC">C191023</field>
+        <field name="Manufacturer_Part_Number">C191023</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="LCSC" value="C191023"/>
+      <property name="Manufacturer_Part_Number" value="C191023"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a31d3e63-e837-4356-b26c-c5b4a5823d0e</tstamps>
     </comp>
     <comp ref="J1">
       <value>3.5mm_Mono_Switched</value>
@@ -336,6 +390,23 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>22c57990-6b78-4f18-8ec6-f1540678b43e</tstamps>
     </comp>
+    <comp ref="R4">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C4410</field>
+        <field name="Manufacturer_Part_Number">C4109</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C4410"/>
+      <property name="Manufacturer_Part_Number" value="C4109"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8265cdce-d331-441d-a9ca-690b282c0c5f</tstamps>
+    </comp>
     <comp ref="R5">
       <value>470</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
@@ -352,6 +423,40 @@
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b7a58442-8471-47d1-8f65-f9b0cc04ffba</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C4410</field>
+        <field name="Manufacturer_Part_Number">C4109</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C4410"/>
+      <property name="Manufacturer_Part_Number" value="C4109"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>060661f8-3d05-4f61-8e59-279a7157282a</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="LCSC">C4410</field>
+        <field name="Manufacturer_Part_Number">C4109</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C4410"/>
+      <property name="Manufacturer_Part_Number" value="C4109"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="16Bars.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d6398329-686b-4d9d-94bc-85cf5bea37ae</tstamps>
     </comp>
     <comp ref="R12">
       <value>10K</value>
@@ -740,10 +845,10 @@
   </libparts>
   <libraries>
     <library logical="4ms_Connector">
-      <uri>C:\Users\Tyler\Documents\GitHub\16Bars/Parts/4ms-kicad-lib/symbols/4ms_Connector.kicad_sym</uri>
+      <uri>C:\Users\carol\Documents\GitHub\16Bars/Parts/4ms-kicad-lib/symbols/4ms_Connector.kicad_sym</uri>
     </library>
     <library logical="4ms_Jack">
-      <uri>C:\Users\Tyler\Documents\GitHub\16Bars/Parts/4ms-kicad-lib/symbols/4ms_Jack.kicad_sym</uri>
+      <uri>C:\Users\carol\Documents\GitHub\16Bars/Parts/4ms-kicad-lib/symbols/4ms_Jack.kicad_sym</uri>
     </library>
     <library logical="Connector_Generic">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
@@ -758,10 +863,10 @@
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
     </library>
     <library logical="SLB1570">
-      <uri>C:\Users\Tyler\Documents\GitHub\16Bars/Parts/SLB1570.lib</uri>
+      <uri>C:\Users\carol\Documents\GitHub\16Bars/Parts/SLB1570.lib</uri>
     </library>
     <library logical="TDSR*">
-      <uri>C:\Users\Tyler\Documents\GitHub\16Bars/Parts/symbols/TDSR0760/2023-01-04_21-55-18.kicad_sym</uri>
+      <uri>C:\Users\carol\Documents\GitHub\16Bars/Parts/symbols/TDSR0760/2023-01-04_21-55-18.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
@@ -811,7 +916,7 @@
     </net>
     <net code="10" name="/firstBar">
       <node ref="A1" pin="15" pinfunction="D12" pintype="bidirectional"/>
-      <node ref="J4" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
     </net>
     <net code="11" name="/firstBarLED">
       <node ref="A1" pin="20" pinfunction="A1" pintype="bidirectional"/>
@@ -819,7 +924,7 @@
     </net>
     <net code="12" name="/lastBar">
       <node ref="A1" pin="19" pinfunction="A0" pintype="bidirectional"/>
-      <node ref="J6" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="D9" pin="2" pinfunction="A" pintype="passive"/>
     </net>
     <net code="13" name="/lastBarLED">
       <node ref="A1" pin="22" pinfunction="A3" pintype="bidirectional"/>
@@ -827,7 +932,7 @@
     </net>
     <net code="14" name="/middleBar">
       <node ref="A1" pin="16" pinfunction="D13" pintype="bidirectional"/>
-      <node ref="J5" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="D8" pin="2" pinfunction="A" pintype="passive"/>
     </net>
     <net code="15" name="/middleBarLED">
       <node ref="A1" pin="21" pinfunction="A2" pintype="bidirectional"/>
@@ -895,61 +1000,85 @@
       <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
     </net>
-    <net code="23" name="Net-(J1-SIG)">
+    <net code="23" name="Net-(D7-K)">
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(D8-K)">
+      <node ref="D8" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(D9-K)">
+      <node ref="D9" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(J1-SIG)">
       <node ref="J1" pin="1" pinfunction="SIG" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
     </net>
-    <net code="24" name="Net-(R15-Pad2)">
+    <net code="27" name="Net-(J4-SIG)">
+      <node ref="J4" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(J5-SIG)">
+      <node ref="J5" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(J6-SIG)">
+      <node ref="J6" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(R15-Pad2)">
       <node ref="R15" pin="2" pintype="passive"/>
       <node ref="SW1" pin="L2" pinfunction="L2" pintype="passive"/>
     </net>
-    <net code="25" name="RESET">
+    <net code="31" name="RESET">
       <node ref="A1" pin="8" pinfunction="D5" pintype="bidirectional"/>
       <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
     </net>
-    <net code="26" name="unconnected-(A1-+5V-Pad27)">
+    <net code="32" name="unconnected-(A1-+5V-Pad27)">
       <node ref="A1" pin="27" pinfunction="+5V" pintype="power_out+no_connect"/>
     </net>
-    <net code="27" name="unconnected-(A1-3V3-Pad17)">
+    <net code="33" name="unconnected-(A1-3V3-Pad17)">
       <node ref="A1" pin="17" pinfunction="3V3" pintype="power_out+no_connect"/>
     </net>
-    <net code="28" name="unconnected-(A1-A5-Pad24)">
+    <net code="34" name="unconnected-(A1-A5-Pad24)">
       <node ref="A1" pin="24" pinfunction="A5" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="29" name="unconnected-(A1-A6-Pad25)">
+    <net code="35" name="unconnected-(A1-A6-Pad25)">
       <node ref="A1" pin="25" pinfunction="A6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="30" name="unconnected-(A1-A7-Pad26)">
+    <net code="36" name="unconnected-(A1-A7-Pad26)">
       <node ref="A1" pin="26" pinfunction="A7" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="31" name="unconnected-(A1-AREF-Pad18)">
+    <net code="37" name="unconnected-(A1-AREF-Pad18)">
       <node ref="A1" pin="18" pinfunction="AREF" pintype="input+no_connect"/>
     </net>
-    <net code="32" name="unconnected-(A1-D0{slash}RX-Pad2)">
+    <net code="38" name="unconnected-(A1-D0{slash}RX-Pad2)">
       <node ref="A1" pin="2" pinfunction="D0/RX" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="33" name="unconnected-(A1-D1{slash}TX-Pad1)">
+    <net code="39" name="unconnected-(A1-D1{slash}TX-Pad1)">
       <node ref="A1" pin="1" pinfunction="D1/TX" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="34" name="unconnected-(A1-D6-Pad9)">
+    <net code="40" name="unconnected-(A1-D6-Pad9)">
       <node ref="A1" pin="9" pinfunction="D6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="35" name="unconnected-(A1-~{RESET}-Pad3)">
+    <net code="41" name="unconnected-(A1-~{RESET}-Pad3)">
       <node ref="A1" pin="3" pinfunction="~{RESET}" pintype="input+no_connect"/>
     </net>
-    <net code="36" name="unconnected-(A1-~{RESET}-Pad28)">
+    <net code="42" name="unconnected-(A1-~{RESET}-Pad28)">
       <node ref="A1" pin="28" pinfunction="~{RESET}" pintype="input+no_connect"/>
     </net>
-    <net code="37" name="unconnected-(J2-Pin_9-Pad9)">
+    <net code="43" name="unconnected-(J2-Pin_9-Pad9)">
       <node ref="J2" pin="9" pinfunction="Pin_9" pintype="passive+no_connect"/>
     </net>
-    <net code="38" name="unconnected-(J2-Pin_10-Pad10)">
+    <net code="44" name="unconnected-(J2-Pin_10-Pad10)">
       <node ref="J2" pin="10" pinfunction="Pin_10" pintype="passive+no_connect"/>
     </net>
-    <net code="39" name="unconnected-(SW1-Pad2)">
+    <net code="45" name="unconnected-(SW1-Pad2)">
       <node ref="SW1" pin="2" pinfunction="2" pintype="passive+no_connect"/>
     </net>
-    <net code="40" name="unconnected-(SW1-Pad3)">
+    <net code="46" name="unconnected-(SW1-Pad3)">
       <node ref="SW1" pin="3" pinfunction="3" pintype="passive+no_connect"/>
     </net>
   </nets>

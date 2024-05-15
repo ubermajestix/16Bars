@@ -1940,7 +1940,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid aa1018c5-e422-4960-ab85-08e2c6a53f3b)
   )
-  (label "firstBar" (at 88.9 26.67 180) (fields_autoplaced)
+  (label "firstBar" (at 92.71 27.94 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid ad3725ce-0c72-4f39-90e0-e123901acbce)
   )
