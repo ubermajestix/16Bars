@@ -27,12 +27,11 @@ const byte beatsPerBarValues[5] = {4, 7, 8, 12, 16};
 const byte barsPerPhraseValues[2] = {8,16}; 
 
 // TESTING Internal clock settings
-// Enter this mode if reset button pressed for 1 second within 10 seconds of startup
-volatile byte enterInternalClockMode = 1; // If reset button pressed on startup enter test mode
-volatile unsigned long enterInternalClockModeTime = 0;
+volatile unsigned long enterInternalClockModeTime = 0; // Enter this mode if reset button pressed for 3 seconds within 10 seconds of startup
 volatile byte internalClock = 0; // Testing mode active when 1
-const byte internalBPM = 500; // 120 bpm 1/4 note is 500ms
-volatile unsigned long lastInternalClockTime = 0;
+const unsigned long internalBPM = 345; // 174 bpm 1/4 note is 345ms
+volatile unsigned long lastClockTime = 0; // For auto-reset and internal clock feature. // TODO use "Last" output clock to self patch for testing?
+
 
 UberPin clockPin(clockPinNum);
 UberPin resetButtonPin(resetButtonPinNum, 5);
@@ -133,52 +132,30 @@ void flashLEDSync(){
 }
 
 void loop(){
-
+  // Enter internal clock mode if reset button pressed and held for 3 seconds within 10 seconds of startup
+  if(millis() <= 10000 && internalClock != 1 && enterInternalClockModeTime != 0 && millis() - enterInternalClockModeTime >= 3000){
+    debugln("----Internal Clock ---");
+    for (int i = 0; i < 3; i++){flashLEDSync(); delay(150);}
+    internalClock = 1;
+  }
+  // Auto reset the counters if we haven't seen a clock signal for 4 seconds. 
+  if(lastClockTime != 0 && millis() - lastClockTime >= 4000){
+    debugln("----AUTO RESET ------");
+    resetCounters();
+  }
   
   if (resetButtonPin.changed()){
     if (resetButtonPin.direction == 1){
-      debugln("---resetRelease---");
+      debugln("---Reset Release---");
       resetOutPin.write(LOW);
       resetButtonPressed = 0;
-      // Enter internal clock mode if reset button pressed and held for 1 second within 10 seconds of startup
-      if(enterInternalClockMode == 0 && millis() <= 10000 &&  millis() - enterInternalClockModeTime >= 1000){
-        debugln("reset long press");
-         for (int i = 0; i < 3; i++){flashLEDSync(); delay(150);}
-        internalClock = 1;
-      }
     }
     else {
-      debugln("----resetbutton---");
-    
-      // If reset button is long pressed during first loop when powering up, enter test mode.
-      if(enterInternalClockMode == 1 && resetButtonPin.direction == 0){
-        debug(millis()); debugln(" reset pressed at startup");
-        enterInternalClockModeTime = millis();
-      }
-      enterInternalClockMode = 0;
-
+      debugln("----Reset Press---");
+      // If reset button is long pressed for 3 seconds within 10 seconds post-setup, then enter test mode.
+      enterInternalClockModeTime = millis();
       // When reset button is pressed we reset the counters, 
-      // check if we need to change beats or bars and output a 
-      // high reset signal to the CD4033 counters to reset the seven segment leds
-      barCounter = 0;
-      beatCounter = 0;
-      firstBar = LOW;
-      middleBar = LOW;
-      lastBar = LOW;
-      digitalWrite(firstBarOutPin, firstBar);
-      digitalWrite(firstBarLEDPin, firstBar);
-      digitalWrite(middleBarOutPin, middleBar);
-      digitalWrite(middleBarLEDPin, middleBar);
-      digitalWrite(lastBarOutPin, lastBar);
-      digitalWrite(lastBarLEDPin, lastBar);
-      changeBeatsAndBars();
-      // Reset 4033's to "00"
-      resetOutPin.write(HIGH);
-      resetOutPin.write(LOW);
-      // Increment 4033's to "01"
-      clockBarPin.write(LOW); 
-      clockBarPin.write(HIGH);
-      clockBarPin.write(LOW);
+      resetCounters();
       resetButtonPressed = 1;
     }
   }
@@ -186,9 +163,7 @@ void loop(){
   // and increment the counter based on internalBPM
   if (internalClock == 1){
     unsigned long internalClockTime = millis();
-    if(internalClockTime - lastInternalClockTime > internalBPM){
-      debugln("----internal clock ---");
-      lastInternalClockTime = internalClockTime;
+    if(internalClockTime - lastClockTime > internalBPM){
       if (!resetButtonPressed){
         incrementCounters();
       }
@@ -205,9 +180,34 @@ void loop(){
   }
 
 }
+
+void resetCounters(){
+  debugln("------RESET------");
+  // check if we need to change beats or bars and output a 
+  // high reset signal to the CD4033 counters to reset the seven segment leds
+  barCounter = 0;
+  beatCounter = 0;
+  firstBar = LOW;
+  middleBar = LOW;
+  lastBar = LOW;
+  digitalWrite(firstBarOutPin, firstBar);
+  digitalWrite(firstBarLEDPin, firstBar);
+  digitalWrite(middleBarOutPin, middleBar);
+  digitalWrite(middleBarLEDPin, middleBar);
+  digitalWrite(lastBarOutPin, lastBar);
+  digitalWrite(lastBarLEDPin, lastBar);
+  changeBeatsAndBars();
+  // Reset 4033's to "00"
+  resetOutPin.write(HIGH);
+  resetOutPin.write(LOW);
+  // Increment 4033's to "01"
+  clockBarPin.write(LOW); 
+  clockBarPin.write(HIGH);
+  clockBarPin.write(LOW);
+}
 // This function will be called whenever a rising edge is detected from the clock
 void incrementCounters(){
-  debugln("-------clock------");
+  lastClockTime = millis();
   if(barCounter == 0){
     firstBar = HIGH;
   }
@@ -239,7 +239,7 @@ void incrementCounters(){
   
   beatCounter++;
   debug("beat ");
-  debugln(beatCounter);
+  debug(beatCounter);
   // End of measure, output HIGH clockbar on next clock signal
   if (beatCounter >= beatsPerBar){
     clockBarState = HIGH;
@@ -263,12 +263,12 @@ void incrementCounters(){
     beatCounter = 0;
     changeBeatsAndBars();
   }
-  debug("reset: "); debugln(resetPhrase);
-  debug("clockBar: "); debug(clockBarState); debug("/"); debugln(barsPerPhrase);
-  debug("bar: "); debugln(barCounter);
-  debug("firstbar: "); debugln(firstBar); 
-  debug("middlebar: "); debugln(middleBar); 
-  debug("lastbar: "); debugln(lastBar); 
+  debug(" reset: "); debug(resetPhrase);
+  debug(" clockBar: "); debug(clockBarState); debug("/"); debug(barsPerPhrase);
+  debug(" bar: "); debug(barCounter);
+  debug(" firstbar: "); debug(firstBar); 
+  debug(" middlebar: "); debug(middleBar); 
+  debug(" lastbar: "); debugln(lastBar); 
 }
 
 // HOW TO: Select time signatures. 
